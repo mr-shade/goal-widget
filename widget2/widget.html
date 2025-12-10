@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Goal Widget - Semicircle</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+    </style>
+    <link rel="stylesheet" href="widget.css">
+</head>
+
+<body>
+    <div id="goal-widget">
+        <!-- Title at top -->
+        <div id="widget-title">SUBSCRIPTIONS</div>
+
+        <!-- SVG Semicircle -->
+        <div class="svg-container">
+            <svg id="goal-svg" viewBox="0 0 500 300">
+                <defs>
+                    <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="12" result="coloredBlur" />
+                        <feMerge>
+                            <feMergeNode in="coloredBlur" />
+                            <feMergeNode in="coloredBlur" />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                    <linearGradient id="progress-gradient" gradientUnits="userSpaceOnUse" x1="50" y1="250" x2="450"
+                        y2="250">
+                        <stop offset="0%" id="grad-stop-1" stop-color="#ff6b6b" />
+                        <stop offset="100%" id="grad-stop-2" stop-color="#ff8e8e" />
+                    </linearGradient>
+                </defs>
+
+                <!-- Background Track (semicircle) -->
+                <path id="track-path" d="M 50 250 A 200 200 0 0 1 450 250" fill="none" stroke-width="32"
+                    stroke-linecap="round" />
+
+                <!-- Glow Layer -->
+                <path id="glow-path" d="M 50 250 A 200 200 0 0 1 450 250" fill="none" stroke-width="32"
+                    stroke-linecap="round" style="display:none" />
+
+                <!-- Progress Arc -->
+                <path id="progress-path" d="M 50 250 A 200 200 0 0 1 450 250" fill="none" stroke-width="32"
+                    stroke-linecap="round" />
+            </svg>
+
+            <!-- Center Image -->
+            <div id="center-image" class="hidden"></div>
+        </div>
+
+        <!-- Value Labels at bottom corners -->
+        <div id="value-labels">
+            <span id="current-val">$25</span>
+            <span id="goal-val">$100</span>
+        </div>
+
+        <!-- DEV MODE CONTROLS -->
+        <div id="dev-controls" class="dev-only hidden">
+            <h3>🛠️ Widget 2 Dev</h3>
+            <div class="dev-group">
+                <label>Appearance:</label>
+                <select id="dev-appearance">
+                    <option value="solid">Solid</option>
+                    <option value="gradient_neon" selected>Gradient + Neon</option>
+                </select>
+            </div>
+            <div class="dev-group">
+                <label>Primary:</label>
+                <input type="color" id="dev-primary" value="#ff6b6b">
+                <label>Secondary:</label>
+                <input type="color" id="dev-secondary" value="#ff8e8e">
+            </div>
+            <div class="dev-group">
+                <label>Title:</label>
+                <input type="text" id="dev-title" value="SUBSCRIPTIONS">
+            </div>
+            <div class="dev-group">
+                <label>Goal:</label>
+                <input type="number" id="dev-goal" value="100" style="width:80px">
+                <label>Prefix:</label>
+                <input type="text" id="dev-prefix" value="$" style="width:40px">
+            </div>
+            <div class="dev-group">
+                <button onclick="devAddProgress(5)">+5</button>
+                <button onclick="devAddProgress(25)">+25</button>
+                <button onclick="devReset()">Reset</button>
+                <button onclick="devComplete()">Complete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="widget.js"></script>
+</body>
+
+</html>

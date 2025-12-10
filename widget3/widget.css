@@ -1,0 +1,115 @@
+:root {
+    --primary-color: #00ffd5;
+    --secondary-color: #00ff88;
+    --text-color: #ffffff;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: var(--font-family);
+    background: transparent;
+}
+
+body.dev-mode {
+    background: #2a2a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#goal-widget {
+    position: relative;
+    width: 420px;
+    height: 420px;
+    color: var(--text-color);
+}
+
+.svg-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#track-path {
+    stroke: #555;
+}
+
+#progress-path {
+    stroke: var(--primary-color);
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+#glow-path {
+    stroke: var(--primary-color);
+    opacity: 0.6;
+    filter: url(#neon-glow);
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+#center-image {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background-image: url('../assets/3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#labels {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+#label-current {
+    position: absolute;
+    bottom: 80px;
+    left: 80px;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#label-goal {
+    position: absolute;
+    bottom: 120px;
+    right: 40px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #888;
+    /* Greyed out like mockup */
+}
+
+#label-title {
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#dev-controls {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    color: #fff;
+}
+
+#dev-controls.hidden {
+    display: none;
+}
