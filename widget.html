@@ -1,86 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>StreamElements Goal Widget</title>
+  <title>Goal Widget</title>
   <style>
-    /* Google Fonts Import - optimized */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Poppins:wght@400;700;900&family=Roboto:wght@400;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
   </style>
   <link rel="stylesheet" href="widget.css">
 </head>
-<body>
 
-  <!-- Main Widget Container -->
+<body>
   <div id="goal-widget">
-    
-    <!-- SVG Layer -->
+    <!-- SVG Progress Circle -->
     <div class="svg-container">
-      <svg id="goal-svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
+      <svg id="goal-svg" viewBox="0 0 500 500">
         <defs>
-          <!-- Filters and Gradients will be injected/controlled by JS/CSS -->
           <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
-             <feGaussianBlur stdDeviation="15" result="coloredBlur" />
-             <feMerge>
-                <feMergeNode in="coloredBlur" />
-                <feMergeNode in="coloredBlur" />
-                <feMergeNode in="SourceGraphic" />
-             </feMerge>
+            <feGaussianBlur stdDeviation="12" result="coloredBlur" />
+            <feMerge>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
           </filter>
-          
-          <linearGradient id="main-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" class="stop-color-1" stop-color="#ff2d95"/>
-            <stop offset="100%" class="stop-color-2" stop-color="#00ffd5"/>
+          <linearGradient id="progress-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" id="grad-stop-1" stop-color="#ff2d95" />
+            <stop offset="100%" id="grad-stop-2" stop-color="#a855f7" />
           </linearGradient>
         </defs>
 
-        <!-- Track (Background Arc) -->
-        <path id="track-path" class="track" d="" fill="none" stroke-linecap="round" />
+        <!-- Background Track -->
+        <circle id="track-circle" cx="250" cy="250" r="190" fill="none" stroke-width="32" stroke-linecap="round"
+          transform="rotate(-90 250 250)" />
 
-        <!-- Glow/Blur Layer (Behind Progress) -->
-        <path id="progress-glow" class="progress-glow" d="" fill="none" stroke-linecap="round" style="display:none; filter: url(#neon-glow);" />
+        <!-- Glow Layer (optional) -->
+        <circle id="glow-circle" cx="250" cy="250" r="190" fill="none" stroke-width="32" stroke-linecap="round"
+          transform="rotate(-90 250 250)" style="display:none" />
 
-        <!-- Main Progress Arc -->
-        <path id="progress-path" class="progress" d="" fill="none" stroke-linecap="round" />
-        
+        <!-- Progress Circle -->
+        <circle id="progress-circle" cx="250" cy="250" r="190" fill="none" stroke-width="32" stroke-linecap="round"
+          transform="rotate(-90 250 250)" />
       </svg>
     </div>
 
-    <!-- Inner Center Information -->
+    <!-- Center Content -->
     <div id="center-container">
-      <!-- Optional Image -->
       <div id="center-image" class="hidden"></div>
-      
-      <!-- Percentage (For Widget 1 mainly) -->
       <div id="center-text">
         <span id="percent-text">0%</span>
       </div>
     </div>
 
-    <!-- Text Labels (Title, Values) -->
-    <!-- Position of these will depend on the Widget Mode class applied to #goal-widget -->
+    <!-- Bottom Labels -->
     <div id="meta-container">
-      <div id="widget-title">GOAL TITLE</div>
+      <div id="widget-title">SUBSCRIPTIONS</div>
       <div id="widget-values">
-        <span id="current-val">0</span>
-        <span class="separator">/</span>
-        <span id="goal-val">100</span>
+        <span id="current-val">0</span><span class="separator">/</span><span id="goal-val">100</span>
       </div>
     </div>
 
-    <!-- Celebration Canvas -->
-    <canvas id="confetti-canvas"></canvas>
-
-    <!-- Debug Buttons -->
-    <div id="debug-controls" class="hidden">
-      <button onclick="window.simulateEvent('add', 1)">+1</button>
-      <button onclick="window.simulateEvent('add', 10)">+10</button>
-      <button onclick="window.simulateEvent('reset')">Reset</button>
-      <button onclick="window.simulateEvent('complete')">Fill</button>
+    <!-- DEV MODE CONTROLS (Hidden in StreamElements) -->
+    <div id="dev-controls" class="dev-only hidden">
+      <h3>🛠️ Dev Controls</h3>
+      <div class="dev-group">
+        <label>Appearance:</label>
+        <select id="dev-appearance">
+          <option value="solid">Solid</option>
+          <option value="gradient_neon" selected>Gradient + Neon</option>
+        </select>
+      </div>
+      <div class="dev-group">
+        <label>Primary:</label>
+        <input type="color" id="dev-primary" value="#ff2d95">
+        <label>Secondary:</label>
+        <input type="color" id="dev-secondary" value="#a855f7">
+      </div>
+      <div class="dev-group">
+        <label>Title:</label>
+        <input type="text" id="dev-title" value="SUBSCRIPTIONS">
+      </div>
+      <div class="dev-group">
+        <label>Goal:</label>
+        <input type="number" id="dev-goal" value="100" style="width:80px">
+      </div>
+      <div class="dev-group">
+        <button onclick="devAddProgress(1)">+1</button>
+        <button onclick="devAddProgress(10)">+10</button>
+        <button onclick="devReset()">Reset</button>
+        <button onclick="devComplete()">Complete</button>
+      </div>
     </div>
-
   </div>
 
   <script src="widget.js"></script>
 </body>
+
 </html>

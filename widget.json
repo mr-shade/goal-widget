@@ -1,16 +1,4 @@
 {
-  "styleMode": {
-    "type": "dropdown",
-    "label": "Widget Style",
-    "value": "widget1",
-    "options": {
-      "widget1": "Widget 1 (Full Circle - Text Focus)",
-      "widget2": "Widget 2 (Full Circle - Image Focus)",
-      "widget3": "Widget 3 (Arch / Semicircle)",
-      "widget4": "Widget 4 (Open Loop)"
-    },
-    "group": "Appearance"
-  },
   "appearanceMode": {
     "type": "dropdown",
     "label": "Appearance Mode",
@@ -29,8 +17,8 @@
   },
   "secondaryColor": {
     "type": "colorpicker",
-    "label": "Secondary Color (Gradient)",
-    "value": "#00ffd5",
+    "label": "Secondary Color (Gradient End)",
+    "value": "#a855f7",
     "group": "Colors"
   },
   "bgTrackColor": {
@@ -41,7 +29,7 @@
   },
   "glowColor": {
     "type": "colorpicker",
-    "label": "Glow/Shadow Color",
+    "label": "Glow Color",
     "value": "rgba(255,45,149,0.8)",
     "group": "Colors"
   },
@@ -74,45 +62,43 @@
   },
   "fontSizeValue": {
     "type": "number",
-    "label": "Value Font Size (px)",
-    "value": 42,
-    "min": 10,
-    "max": 100,
+    "label": "Percentage Font Size (px)",
+    "value": 48,
+    "min": 16,
+    "max": 120,
     "step": 1,
     "group": "Text & Fonts"
   },
   "imageUrl": {
     "type": "image-input",
-    "label": "Center Image",
-    "group": "Image"
+    "label": "Center Image (optional)",
+    "group": "Center Content"
   },
   "imageShape": {
     "type": "dropdown",
     "label": "Image Shape",
     "value": "none",
     "options": {
-      "none": "None (Hidden)",
+      "none": "None (Show Percentage)",
       "circle": "Circle",
       "square": "Square"
     },
-    "group": "Image"
+    "group": "Center Content"
   },
   "goalValue": {
     "type": "number",
     "label": "Goal Value",
     "value": 100,
+    "min": 1,
+    "step": 1,
     "group": "Goal Settings"
   },
   "startingProgress": {
     "type": "number",
     "label": "Starting Progress",
-    "value": 65,
-    "group": "Goal Settings"
-  },
-  "currentValue": {
-    "type": "number",
-    "label": "Current Value (Manual Override)",
     "value": 0,
+    "min": 0,
+    "step": 1,
     "group": "Goal Settings"
   },
   "eventType": {
@@ -123,53 +109,43 @@
       "follower": "Follower (+1)",
       "subscriber": "Subscriber (+1)",
       "donation": "Tip / Donation (Amount)",
-      "cheer": "Cheer (Amount)",
-      "custom": "Custom (via Widget Event)"
+      "cheer": "Cheer (Bits Amount)"
     },
-    "group": "Behavior"
+    "group": "Goal Settings"
   },
   "progressIncrementUnit": {
     "type": "number",
-    "label": "Increment Amount (per event if not donation)",
+    "label": "Increment per Event",
     "value": 1,
+    "min": 0.1,
     "step": 0.1,
-    "group": "Behavior"
+    "group": "Goal Settings"
   },
   "stopAtGoal": {
     "type": "checkbox",
-    "label": "Stop at Goal",
+    "label": "Stop at Goal (no overflow)",
     "value": false,
     "group": "Behavior"
   },
   "resetAtGoal": {
     "type": "checkbox",
-    "label": "Reset at Goal",
+    "label": "Reset to 0 when Goal Reached",
     "value": false,
     "group": "Behavior"
   },
   "increaseAfterGoalBy": {
     "type": "number",
-    "label": "Increase Goal After Reaching (0 to disable)",
+    "label": "Auto-Increase Goal By (0 = disabled)",
     "value": 0,
+    "min": 0,
+    "step": 1,
     "group": "Behavior"
   },
   "enableChatCommands": {
     "type": "checkbox",
-    "label": "Enable Chat Commands (!add, !setgoal)",
+    "label": "Enable Chat Commands",
     "value": true,
     "group": "Behavior"
-  },
-  "enableGlow": {
-    "type": "checkbox",
-    "label": "Enable Glow Effect",
-    "value": true,
-    "group": "Appearance"
-  },
-  "useGradient": {
-    "type": "checkbox",
-    "label": "Use Gradient Stroke",
-    "value": false,
-    "group": "Appearance"
   },
   "size": {
     "type": "number",
@@ -178,18 +154,6 @@
     "min": 100,
     "max": 1000,
     "step": 10,
-    "group": "Technical"
-  },
-  "resetPersistent": {
-    "type": "button",
-    "label": "Reset Saved Data",
-    "value": "Reset",
-    "group": "Technical"
-  },
-  "showDebugButtons": {
-    "type": "checkbox",
-    "label": "Show Debug Buttons",
-    "value": false,
-    "group": "Technical"
+    "group": "Layout"
   }
 }

@@ -1,95 +1,109 @@
 :root {
   --widget-size: 420px;
   --primary-color: #ff2d95;
-  --secondary-color: #00ffd5;
+  --secondary-color: #a855f7;
   --bg-track-color: #5a5a5a;
   --text-color: #ffffff;
   --glow-color: rgba(255, 45, 149, 0.8);
   --font-family: 'Poppins', sans-serif;
   --title-size: 28px;
-  --value-size: 42px;
-  --stroke-width: 30px;
+  --value-size: 48px;
+  --stroke-width: 32;
 }
 
 * {
   box-sizing: border-box;
-}
-
-body, html {
   margin: 0;
   padding: 0;
+}
+
+body,
+html {
   width: 100%;
   height: 100%;
-  overflow: hidden; /* Prevent scrollbars in OBS */
+  overflow: hidden;
   font-family: var(--font-family);
   background: transparent;
 }
 
-/* Main Container */
+/* For local dev only - dark background to see widget */
+body.dev-mode {
+  background: #2a2a40;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+/* Main Widget Container */
 #goal-widget {
   position: relative;
   width: var(--widget-size);
-  height: var(--widget-size);
-  margin: 20px; /* Padding for glow spilling out */
+  height: calc(var(--widget-size) + 80px);
+  /* Extra for labels */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   color: var(--text-color);
 }
 
-/* SVG Layer */
+/* SVG Container */
 .svg-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  /* Glow filter might expand bounds, so ensure overflow visible */
-  overflow: visible; 
+  position: relative;
+  width: var(--widget-size);
+  height: var(--widget-size);
+  overflow: visible;
 }
+
 #goal-svg {
   width: 100%;
   height: 100%;
   overflow: visible;
 }
 
-/* Paths */
-.track {
+/* Track Circle (Background) */
+#track-circle {
   stroke: var(--bg-track-color);
-  stroke-width: var(--stroke-width);
+  transition: stroke 0.3s ease;
 }
-.progress {
-  stroke: var(--primary-color); /* Fallback */
-  stroke-width: var(--stroke-width);
-  transition: stroke-dashoffset 0.5s ease-out;
+
+/* Progress Circle */
+#progress-circle {
+  stroke: var(--primary-color);
+  transition: stroke-dashoffset 0.5s ease-out, stroke 0.3s ease;
 }
-.progress-glow {
-  stroke: var(--primary-color); /* Fallback */
-  stroke-width: var(--stroke-width); /* Slightly thicker? Filter handles blur */
+
+/* Glow Circle */
+#glow-circle {
+  stroke: var(--primary-color);
   opacity: 0.6;
-  transition: stroke-dashoffset 0.5s ease-out;
+  filter: url(#neon-glow);
+  transition: stroke-dashoffset 0.5s ease-out, stroke 0.3s ease;
 }
 
-.use-gradient .progress {
-  stroke: url(#main-gradient);
-}
-.use-gradient .progress-glow {
-  stroke: url(#main-gradient);
-}
-.appearance-neon .progress {
-  filter: drop-shadow(0 0 5px var(--glow-color));
+/* Gradient Mode */
+.use-gradient #progress-circle,
+.use-gradient #glow-circle {
+  stroke: url(#progress-gradient);
 }
 
-/* Center Container (Image / Percent) */
+/* Neon Mode */
+.appearance-neon #glow-circle {
+  display: block !important;
+}
+
+.appearance-neon #progress-circle {
+  filter: drop-shadow(0 0 8px var(--glow-color));
+}
+
+/* Center Container */
 #center-container {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
+  width: var(--widget-size);
+  height: var(--widget-size);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -98,167 +112,161 @@ body, html {
 }
 
 #center-image {
-  background-size: cover;
+  width: 55%;
+  height: 55%;
+  background-size: contain;
   background-position: center;
-  width: 50%;
-  height: 50%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
 }
-#center-image.shape-circle { border-radius: 50%; }
-#center-image.shape-square { border-radius: 10%; }
-#center-image.hidden { display: none; }
+
+#center-image.hidden {
+  display: none;
+}
 
 #center-text {
-  font-weight: 900;
   text-align: center;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-#percent-text {
-  font-size: var(--value-size);
 }
 
-/* Meta Labels (Title, Values) */
+#percent-text {
+  font-size: var(--value-size);
+  font-weight: 900;
+  color: var(--text-color);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Meta Container (Title + Values) */
 #meta-container {
-  position: absolute;
-  width: 100%;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
+  margin-top: 10px;
 }
 
 #widget-title {
   font-size: var(--title-size);
   font-weight: 700;
+  color: var(--primary-color);
   text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   margin-bottom: 5px;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 #widget-values {
-  font-size: calc(var(--value-size) * 0.75);
+  font-size: calc(var(--value-size) * 0.6);
   font-weight: 600;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  color: var(--text-color);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* --- Layout Modes --- */
-
-/* Widget 1 & 2: Full Circle */
-/* Layout: Title & Values below the circle */
-.style-widget1 #meta-container,
-.style-widget2 #meta-container {
-  top: 90%; /* Push below center */
-  left: 0;
-}
-.style-widget1 #widget-values,
-.style-widget2 #widget-values {
-  display: block; /* Standard line */
+.separator {
+  margin: 0 5px;
+  opacity: 0.7;
 }
 
-/* Widget 1 Special: Percent in center (Default) */
-.style-widget1 #center-text {
-  display: block;
-}
-/* Widget 2 Special: Image in center (Default preference) */
-.style-widget2 #center-text {
-  /* Usually hidden if image is present, but we rely on settings */
-}
-
-/* Widget 3: Arch (Semi-circle) */
-/* Title Top, Values Split Bottom */
-.style-widget3 #goal-widget {
-  /* The SVG path will be upper half. Center container moves down? */
-}
-.style-widget3 #meta-container {
-  height: 100%;
-  justify-content: space-between;
-  top: 0;
-}
-.style-widget3 #widget-title {
-  margin-top: -10%; /* Pull above arc */
-}
-.style-widget3 #widget-values {
-  position: absolute;
-  bottom: 25%; /* Align with bottom of arc legs */
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10%;
-}
-.style-widget3 #center-container {
-  top: 10%; /* Move image up slightly into arch */
-}
-
-/* Widget 4: Open Loop (C-Shape) */
-/* Title Bottom Right? Values at ends? */
-/* Layout based on Image 3: Title "SUBSCRIPTIONS" below right end. Values at ends. */
-.style-widget4 #meta-container {
-  height: 100%;
-  top: 0;
-}
-.style-widget4 #widget-title {
-  position: absolute;
-  bottom: 10%;
-  right: 0;
-  text-align: right;
-  width: auto;
-}
-.style-widget4 #widget-values {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-}
-/* Position value spans absolutely for flexibility */
-.style-widget4 #current-val {
-  position: absolute;
-  bottom: 15%;
-  left: 15%;
-  font-size: var(--value-size);
-}
-.style-widget4 #goal-val {
-  position: absolute;
-  bottom: 35%; /* Mid-right? */
-  right: 5%;
-  font-size: var(--value-size);
-}
-.style-widget4 .separator {
-  display: none; /* Hide separator for widespread layout */
-}
-
-/* Debug Controls */
-#debug-controls {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  z-index: 100;
-  background: rgba(0,0,0,0.7);
-  padding: 5px;
-  border-radius: 5px;
-}
-#debug-controls.hidden { display: none; }
-#debug-controls button {
-  font-size: 12px;
-  padding: 5px 10px;
-  margin-right: 5px;
-  cursor: pointer;
-  background: #333;
+/* ============================================
+   DEV MODE CONTROLS 
+   (Only visible in local development)
+   ============================================ */
+#dev-controls {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: #fff;
-  border: 1px solid #555;
-  border-radius: 3px;
-}
-#debug-controls button:hover { background: #555; }
-
-/* Canvas */
-#confetti-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 10;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+  z-index: 9999;
+  min-width: 280px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
-/* Image overrides */
-.hidden { display: none !important; }
+#dev-controls.hidden {
+  display: none !important;
+}
+
+#dev-controls h3 {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  color: #ff2d95;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+.dev-group {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dev-group label {
+  font-weight: 600;
+  color: #aaa;
+  min-width: 70px;
+}
+
+.dev-group select,
+.dev-group input[type="text"],
+.dev-group input[type="number"] {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 12px;
+}
+
+.dev-group input[type="color"] {
+  width: 40px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dev-group button {
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #ff2d95, #a855f7);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.dev-group button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.dev-group button:active {
+  transform: scale(0.95);
+}
+
+/* Celebration Animation */
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.celebrating #progress-circle {
+  animation: pulse 0.3s ease-in-out 3;
+}
+
+/* Hidden utility */
+.hidden {
+  display: none !important;
+}
