@@ -1,0 +1,195 @@
+{
+  "styleMode": {
+    "type": "dropdown",
+    "label": "Widget Style",
+    "value": "widget1",
+    "options": {
+      "widget1": "Widget 1 (Full Circle - Text Focus)",
+      "widget2": "Widget 2 (Full Circle - Image Focus)",
+      "widget3": "Widget 3 (Arch / Semicircle)",
+      "widget4": "Widget 4 (Open Loop)"
+    },
+    "group": "Appearance"
+  },
+  "appearanceMode": {
+    "type": "dropdown",
+    "label": "Appearance Mode",
+    "value": "solid",
+    "options": {
+      "solid": "Solid Color",
+      "gradient_neon": "Gradient + Neon Glow"
+    },
+    "group": "Appearance"
+  },
+  "primaryColor": {
+    "type": "colorpicker",
+    "label": "Primary Color",
+    "value": "#ff2d95",
+    "group": "Colors"
+  },
+  "secondaryColor": {
+    "type": "colorpicker",
+    "label": "Secondary Color (Gradient)",
+    "value": "#00ffd5",
+    "group": "Colors"
+  },
+  "bgTrackColor": {
+    "type": "colorpicker",
+    "label": "Background Track Color",
+    "value": "#5a5a5a",
+    "group": "Colors"
+  },
+  "glowColor": {
+    "type": "colorpicker",
+    "label": "Glow/Shadow Color",
+    "value": "rgba(255,45,149,0.8)",
+    "group": "Colors"
+  },
+  "textColor": {
+    "type": "colorpicker",
+    "label": "Text Color",
+    "value": "#ffffff",
+    "group": "Colors"
+  },
+  "titleText": {
+    "type": "text",
+    "label": "Title Text",
+    "value": "SUBSCRIPTIONS",
+    "group": "Text & Fonts"
+  },
+  "fontFamily": {
+    "type": "text",
+    "label": "Font Family",
+    "value": "Poppins, sans-serif",
+    "group": "Text & Fonts"
+  },
+  "titleSize": {
+    "type": "number",
+    "label": "Title Font Size (px)",
+    "value": 28,
+    "min": 10,
+    "max": 100,
+    "step": 1,
+    "group": "Text & Fonts"
+  },
+  "fontSizeValue": {
+    "type": "number",
+    "label": "Value Font Size (px)",
+    "value": 42,
+    "min": 10,
+    "max": 100,
+    "step": 1,
+    "group": "Text & Fonts"
+  },
+  "imageUrl": {
+    "type": "image-input",
+    "label": "Center Image",
+    "group": "Image"
+  },
+  "imageShape": {
+    "type": "dropdown",
+    "label": "Image Shape",
+    "value": "none",
+    "options": {
+      "none": "None (Hidden)",
+      "circle": "Circle",
+      "square": "Square"
+    },
+    "group": "Image"
+  },
+  "goalValue": {
+    "type": "number",
+    "label": "Goal Value",
+    "value": 100,
+    "group": "Goal Settings"
+  },
+  "startingProgress": {
+    "type": "number",
+    "label": "Starting Progress",
+    "value": 65,
+    "group": "Goal Settings"
+  },
+  "currentValue": {
+    "type": "number",
+    "label": "Current Value (Manual Override)",
+    "value": 0,
+    "group": "Goal Settings"
+  },
+  "eventType": {
+    "type": "dropdown",
+    "label": "Event Type",
+    "value": "subscriber",
+    "options": {
+      "follower": "Follower (+1)",
+      "subscriber": "Subscriber (+1)",
+      "donation": "Tip / Donation (Amount)",
+      "cheer": "Cheer (Amount)",
+      "custom": "Custom (via Widget Event)"
+    },
+    "group": "Behavior"
+  },
+  "progressIncrementUnit": {
+    "type": "number",
+    "label": "Increment Amount (per event if not donation)",
+    "value": 1,
+    "step": 0.1,
+    "group": "Behavior"
+  },
+  "stopAtGoal": {
+    "type": "checkbox",
+    "label": "Stop at Goal",
+    "value": false,
+    "group": "Behavior"
+  },
+  "resetAtGoal": {
+    "type": "checkbox",
+    "label": "Reset at Goal",
+    "value": false,
+    "group": "Behavior"
+  },
+  "increaseAfterGoalBy": {
+    "type": "number",
+    "label": "Increase Goal After Reaching (0 to disable)",
+    "value": 0,
+    "group": "Behavior"
+  },
+  "enableChatCommands": {
+    "type": "checkbox",
+    "label": "Enable Chat Commands (!add, !setgoal)",
+    "value": true,
+    "group": "Behavior"
+  },
+  "enableGlow": {
+    "type": "checkbox",
+    "label": "Enable Glow Effect",
+    "value": true,
+    "group": "Appearance"
+  },
+  "useGradient": {
+    "type": "checkbox",
+    "label": "Use Gradient Stroke",
+    "value": false,
+    "group": "Appearance"
+  },
+  "size": {
+    "type": "number",
+    "label": "Widget Size (px)",
+    "value": 420,
+    "min": 100,
+    "max": 1000,
+    "step": 10,
+    "group": "Technical"
+  },
+  "resetPersistent": {
+    "type": "button",
+    "label": "Reset Saved Data",
+    "value": "Reset",
+    "group": "Technical"
+  },
+  "showDebugButtons": {
+    "type": "checkbox",
+    "label": "Show Debug Buttons",
+    "value": false,
+    "group": "Technical"
+  }
+}

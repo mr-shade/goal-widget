@@ -1,0 +1,264 @@
+:root {
+  --widget-size: 420px;
+  --primary-color: #ff2d95;
+  --secondary-color: #00ffd5;
+  --bg-track-color: #5a5a5a;
+  --text-color: #ffffff;
+  --glow-color: rgba(255, 45, 149, 0.8);
+  --font-family: 'Poppins', sans-serif;
+  --title-size: 28px;
+  --value-size: 42px;
+  --stroke-width: 30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevent scrollbars in OBS */
+  font-family: var(--font-family);
+  background: transparent;
+}
+
+/* Main Container */
+#goal-widget {
+  position: relative;
+  width: var(--widget-size);
+  height: var(--widget-size);
+  margin: 20px; /* Padding for glow spilling out */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+/* SVG Layer */
+.svg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* Glow filter might expand bounds, so ensure overflow visible */
+  overflow: visible; 
+}
+#goal-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Paths */
+.track {
+  stroke: var(--bg-track-color);
+  stroke-width: var(--stroke-width);
+}
+.progress {
+  stroke: var(--primary-color); /* Fallback */
+  stroke-width: var(--stroke-width);
+  transition: stroke-dashoffset 0.5s ease-out;
+}
+.progress-glow {
+  stroke: var(--primary-color); /* Fallback */
+  stroke-width: var(--stroke-width); /* Slightly thicker? Filter handles blur */
+  opacity: 0.6;
+  transition: stroke-dashoffset 0.5s ease-out;
+}
+
+.use-gradient .progress {
+  stroke: url(#main-gradient);
+}
+.use-gradient .progress-glow {
+  stroke: url(#main-gradient);
+}
+.appearance-neon .progress {
+  filter: drop-shadow(0 0 5px var(--glow-color));
+}
+
+/* Center Container (Image / Percent) */
+#center-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+#center-image {
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 50%;
+}
+#center-image.shape-circle { border-radius: 50%; }
+#center-image.shape-square { border-radius: 10%; }
+#center-image.hidden { display: none; }
+
+#center-text {
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+#percent-text {
+  font-size: var(--value-size);
+}
+
+/* Meta Labels (Title, Values) */
+#meta-container {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#widget-title {
+  font-size: var(--title-size);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+#widget-values {
+  font-size: calc(var(--value-size) * 0.75);
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* --- Layout Modes --- */
+
+/* Widget 1 & 2: Full Circle */
+/* Layout: Title & Values below the circle */
+.style-widget1 #meta-container,
+.style-widget2 #meta-container {
+  top: 90%; /* Push below center */
+  left: 0;
+}
+.style-widget1 #widget-values,
+.style-widget2 #widget-values {
+  display: block; /* Standard line */
+}
+
+/* Widget 1 Special: Percent in center (Default) */
+.style-widget1 #center-text {
+  display: block;
+}
+/* Widget 2 Special: Image in center (Default preference) */
+.style-widget2 #center-text {
+  /* Usually hidden if image is present, but we rely on settings */
+}
+
+/* Widget 3: Arch (Semi-circle) */
+/* Title Top, Values Split Bottom */
+.style-widget3 #goal-widget {
+  /* The SVG path will be upper half. Center container moves down? */
+}
+.style-widget3 #meta-container {
+  height: 100%;
+  justify-content: space-between;
+  top: 0;
+}
+.style-widget3 #widget-title {
+  margin-top: -10%; /* Pull above arc */
+}
+.style-widget3 #widget-values {
+  position: absolute;
+  bottom: 25%; /* Align with bottom of arc legs */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+.style-widget3 #center-container {
+  top: 10%; /* Move image up slightly into arch */
+}
+
+/* Widget 4: Open Loop (C-Shape) */
+/* Title Bottom Right? Values at ends? */
+/* Layout based on Image 3: Title "SUBSCRIPTIONS" below right end. Values at ends. */
+.style-widget4 #meta-container {
+  height: 100%;
+  top: 0;
+}
+.style-widget4 #widget-title {
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  text-align: right;
+  width: auto;
+}
+.style-widget4 #widget-values {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+/* Position value spans absolutely for flexibility */
+.style-widget4 #current-val {
+  position: absolute;
+  bottom: 15%;
+  left: 15%;
+  font-size: var(--value-size);
+}
+.style-widget4 #goal-val {
+  position: absolute;
+  bottom: 35%; /* Mid-right? */
+  right: 5%;
+  font-size: var(--value-size);
+}
+.style-widget4 .separator {
+  display: none; /* Hide separator for widespread layout */
+}
+
+/* Debug Controls */
+#debug-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 100;
+  background: rgba(0,0,0,0.7);
+  padding: 5px;
+  border-radius: 5px;
+}
+#debug-controls.hidden { display: none; }
+#debug-controls button {
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 3px;
+}
+#debug-controls button:hover { background: #555; }
+
+/* Canvas */
+#confetti-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Image overrides */
+.hidden { display: none !important; }
