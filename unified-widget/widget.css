@@ -1,0 +1,170 @@
+:root {
+    --primary: #ff2d95;
+    --secondary: #00ffd5;
+    --track: #444;
+    --text: #fff;
+    --font: 'Poppins', sans-serif;
+    --size: 400px;
+    --stroke: 32px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: var(--font);
+    background: transparent;
+}
+
+body.dev {
+    background: #1a1a2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#widget-container {
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* Path Styles */
+#track-path {
+    stroke: var(--track);
+    stroke-width: var(--stroke);
+}
+
+#progress-path {
+    stroke: var(--primary);
+    stroke-width: var(--stroke);
+    transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#glow-path {
+    display: none;
+    stroke: var(--primary);
+    stroke-width: var(--stroke);
+    filter: url(#neon-filter);
+    opacity: 0.6;
+    transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Style Modes */
+.style-neon #glow-path {
+    display: block;
+}
+
+.style-neon #progress-path {
+    stroke: url(#main-gradient);
+}
+
+.style-neon #glow-path {
+    stroke: url(#main-gradient);
+}
+
+/* Content Layouts match shapes via JS-applied classes if needed, 
+   but we'll use a generic centered layout manipulated by JS */
+#content-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text);
+}
+
+#title-el {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#value-el {
+    font-size: 36px;
+    font-weight: 900;
+    margin-top: 5px;
+}
+
+#center-percent {
+    font-size: 52px;
+    font-weight: 900;
+    display: none;
+}
+
+/* Shape Specific Layout Overrides */
+/* Semi-Circle: content at bottom */
+.mode-semi #widget-container {
+    height: calc(var(--size) * 0.6);
+    align-items: flex-end;
+}
+
+.mode-semi #content-layer {
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+.mode-semi #main-svg {
+    height: 166%;
+    top: -33%;
+}
+
+/* Wait, easy SVG viewbox manipulation is better. 
+   We will keep container square and move text? No, StreamElements iframe is fixed size usually.
+   Better: Center everything relative to 500x500 viewBox. */
+
+.mode-full #center-percent {
+    display: block;
+}
+
+.mode-full #text-wrapper {
+    position: absolute;
+    bottom: -60px;
+}
+
+/* Push title below circle */
+
+/* Dev Controls */
+#dev-controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff;
+    z-index: 999;
+}
+
+#dev-controls.hidden {
+    display: none;
+}
+
+#dev-controls select,
+#dev-controls button {
+    margin: 5px;
+    padding: 5px;
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+}

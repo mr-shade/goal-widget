@@ -1,0 +1,124 @@
+{
+  "section_appearance": {
+    "type": "header",
+    "label": "🎨 Widget Design"
+  },
+  "shapeMode": {
+    "type": "dropdown",
+    "label": "Widget Shape",
+    "value": "full",
+    "options": {
+      "full": "Full Circle (360°)",
+      "semi": "Semi Circle (180° Arch)",
+      "arc75": "Wide Arc (270°)",
+      "openbottom": "Open Bottom (Horseshoe)"
+    },
+    "group": "Appearance"
+  },
+  "styleMode": {
+    "type": "dropdown",
+    "label": "Style Mode",
+    "value": "neon",
+    "options": {
+      "solid": "Solid Color",
+      "neon": "Gradient + Neon Glow"
+    },
+    "group": "Appearance"
+  },
+  "primaryColor": {
+    "type": "colorpicker",
+    "label": "Primary Color (Start)",
+    "value": "#ff2d95",
+    "group": "Colors"
+  },
+  "secondaryColor": {
+    "type": "colorpicker",
+    "label": "Secondary Color (End)",
+    "value": "#00ffd5",
+    "group": "Colors"
+  },
+  "trackColor": {
+    "type": "colorpicker",
+    "label": "Track Background Color",
+    "value": "#444444",
+    "group": "Colors"
+  },
+  "glowColor": {
+    "type": "colorpicker",
+    "label": "Glow Color",
+    "value": "rgba(255, 45, 149, 0.8)",
+    "group": "Colors"
+  },
+  "textColor": {
+    "type": "colorpicker",
+    "label": "Text Color",
+    "value": "#ffffff",
+    "group": "Colors"
+  },
+  "section_content": {
+    "type": "header",
+    "label": "📝 Content & Data"
+  },
+  "titleText": {
+    "type": "text",
+    "label": "Title",
+    "value": "GOAL",
+    "group": "Content"
+  },
+  "fontFamily": {
+    "type": "googleFont",
+    "label": "Font Family",
+    "value": "Poppins",
+    "group": "Content"
+  },
+  "goalValue": {
+    "type": "number",
+    "label": "Goal Target",
+    "value": 100,
+    "group": "Goal Data"
+  },
+  "startingValue": {
+    "type": "number",
+    "label": "Starting Value",
+    "value": 0,
+    "group": "Goal Data"
+  },
+  "currencySymbol": {
+    "type": "text",
+    "label": "Prefix (e.g. $)",
+    "value": "",
+    "group": "Goal Data"
+  },
+  "section_behavior": {
+    "type": "header",
+    "label": "⚙️ Behavior"
+  },
+  "eventType": {
+    "type": "dropdown",
+    "label": "Event Trigger",
+    "value": "subscriber",
+    "options": {
+      "follower": "Follower (+1)",
+      "subscriber": "Subscriber (+1)",
+      "tip": "Tip (Amount)",
+      "cheer": "Cheer (Amount)",
+      "manual": "Manual Only"
+    },
+    "group": "Behavior"
+  },
+  "enableCommands": {
+    "type": "checkbox",
+    "label": "Enable !add / !set commands",
+    "value": true,
+    "group": "Behavior"
+  },
+  "widgetSize": {
+    "type": "slider",
+    "label": "Widget Scale",
+    "value": 400,
+    "min": 200,
+    "max": 800,
+    "step": 10,
+    "group": "Layout"
+  }
+}

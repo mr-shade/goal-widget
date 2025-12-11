@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unified Goal Widget</title>
+    <style>
+        /* Base Font Import - Updated via JS based on settings usually, but offering default */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Inter:wght@400;700;900&display=swap');
+    </style>
+    <link rel="stylesheet" href="widget.css">
+</head>
+
+<body>
+    <div id="widget-container">
+        <!-- Main SVG -->
+        <svg id="main-svg" viewBox="0 0 500 500">
+            <defs>
+                <!-- Neon Filter -->
+                <filter id="neon-filter" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="12" result="blur" />
+                    <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                </filter>
+
+                <!-- Dynamic Gradient -->
+                <linearGradient id="main-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" id="stop1" stop-color="#ff2d95" />
+                    <stop offset="100%" id="stop2" stop-color="#00ffd5" />
+                </linearGradient>
+            </defs>
+
+            <!-- Three Layers: Track, Glow, Progress -->
+            <path id="track-path" d="" fill="none" stroke-linecap="round" />
+            <path id="glow-path" d="" fill="none" stroke-linecap="round" />
+            <path id="progress-path" d="" fill="none" stroke-linecap="round" />
+        </svg>
+
+        <!-- Content Overlays -->
+        <div id="content-layer">
+            <div id="text-wrapper">
+                <div id="title-el">GOAL</div>
+                <div id="value-el">0 / 100</div>
+            </div>
+            <!-- Center Percentage for Full Circle Mode usually -->
+            <div id="center-percent">0%</div>
+        </div>
+
+        <!-- Dev Controls (Hidden in Prod) -->
+        <div id="dev-controls" class="hidden">
+            <h3>🛠️ Unified Widget</h3>
+            <select id="d-shape" onchange="devUpdate()">
+                <option value="full">Full Circle (360)</option>
+                <option value="semi">Semi Circle (180)</option>
+                <option value="arc75">75% Arc (270)</option>
+                <option value="openbottom">Open Bottom</option>
+            </select>
+            <select id="d-style" onchange="devUpdate()">
+                <option value="solid">Solid</option>
+                <option value="neon" selected>Neon</option>
+            </select>
+            <div class="btns">
+                <button onclick="devAdd(5)">+5</button>
+                <button onclick="devAdd(25)">+25</button>
+                <button onclick="devReset()">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="widget.js"></script>
+</body>
+
+</html>
