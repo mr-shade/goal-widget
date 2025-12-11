@@ -6,7 +6,7 @@
   "shapeMode": {
     "type": "dropdown",
     "label": "Widget Shape",
-    "value": "full",
+    "value": "semi",
     "options": {
       "full": "Full Circle (360°)",
       "semi": "Semi Circle (180° Arch)",
@@ -27,26 +27,26 @@
   },
   "primaryColor": {
     "type": "colorpicker",
-    "label": "Primary Color (Start)",
+    "label": "Primary Color (Gradient Start)",
     "value": "#ff2d95",
     "group": "Colors"
   },
   "secondaryColor": {
     "type": "colorpicker",
-    "label": "Secondary Color (End)",
-    "value": "#00ffd5",
+    "label": "Secondary Color (Gradient End)",
+    "value": "#a855f7",
     "group": "Colors"
   },
   "trackColor": {
     "type": "colorpicker",
     "label": "Track Background Color",
-    "value": "#444444",
+    "value": "#5a5a5a",
     "group": "Colors"
   },
   "glowColor": {
     "type": "colorpicker",
     "label": "Glow Color",
-    "value": "rgba(255, 45, 149, 0.8)",
+    "value": "rgba(255, 45, 149, 0.6)",
     "group": "Colors"
   },
   "textColor": {
@@ -55,14 +55,41 @@
     "value": "#ffffff",
     "group": "Colors"
   },
+  "section_image": {
+    "type": "header",
+    "label": "🖼️ Center Image"
+  },
+  "imageUrl": {
+    "type": "image-input",
+    "label": "Upload Custom Image",
+    "group": "Image"
+  },
+  "imageSize": {
+    "type": "slider",
+    "label": "Image Scale (%)",
+    "value": 50,
+    "min": 10,
+    "max": 100,
+    "step": 1,
+    "group": "Image"
+  },
+  "imageOffsetY": {
+    "type": "slider",
+    "label": "Vertical Offset",
+    "value": 0,
+    "min": -100,
+    "max": 100,
+    "step": 5,
+    "group": "Image"
+  },
   "section_content": {
     "type": "header",
-    "label": "📝 Content & Data"
+    "label": "📝 Content & Text"
   },
   "titleText": {
     "type": "text",
-    "label": "Title",
-    "value": "GOAL",
+    "label": "Title Text",
+    "value": "SUBSCRIPTIONS",
     "group": "Content"
   },
   "fontFamily": {
@@ -85,7 +112,7 @@
   },
   "currencySymbol": {
     "type": "text",
-    "label": "Prefix (e.g. $)",
+    "label": "Value Prefix (e.g. $)",
     "value": "",
     "group": "Goal Data"
   },
@@ -108,14 +135,14 @@
   },
   "enableCommands": {
     "type": "checkbox",
-    "label": "Enable !add / !set commands",
+    "label": "Enable Chat Commands (!add, !set)",
     "value": true,
     "group": "Behavior"
   },
   "widgetSize": {
     "type": "slider",
-    "label": "Widget Scale",
-    "value": 400,
+    "label": "Widget Scale (px)",
+    "value": 420,
     "min": 200,
     "max": 800,
     "step": 10,

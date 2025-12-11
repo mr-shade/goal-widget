@@ -1,11 +1,16 @@
+/* CSS for Unified Widget */
 :root {
     --primary: #ff2d95;
-    --secondary: #00ffd5;
+    --secondary: #a855f7;
     --track: #444;
     --text: #fff;
     --font: 'Poppins', sans-serif;
-    --size: 400px;
+    --size: 420px;
     --stroke: 32px;
+    /* Image Vars */
+    --img-url: none;
+    --img-scale: 50%;
+    --img-offset-y: 0px;
 }
 
 body {
@@ -40,9 +45,9 @@ body.dev {
     width: 100%;
     height: 100%;
     overflow: visible;
+    z-index: 1;
 }
 
-/* Path Styles */
 #track-path {
     stroke: var(--track);
     stroke-width: var(--stroke);
@@ -63,21 +68,15 @@ body.dev {
     transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Style Modes */
 .style-neon #glow-path {
     display: block;
 }
 
-.style-neon #progress-path {
-    stroke: url(#main-gradient);
-}
-
+.style-neon #progress-path,
 .style-neon #glow-path {
     stroke: url(#main-gradient);
 }
 
-/* Content Layouts match shapes via JS-applied classes if needed, 
-   but we'll use a generic centered layout manipulated by JS */
 #content-layer {
     position: absolute;
     top: 0;
@@ -85,6 +84,7 @@ body.dev {
     width: 100%;
     height: 100%;
     pointer-events: none;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,56 +93,80 @@ body.dev {
     color: var(--text);
 }
 
+/* Custom Image Logic */
+#custom-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% + var(--img-offset-y)));
+    width: var(--img-scale);
+    height: var(--img-scale);
+    background-image: var(--img-url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#custom-image.hidden {
+    display: none;
+}
+
+/* Text Layouts */
 #title-el {
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #value-el {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 900;
     margin-top: 5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #center-percent {
-    font-size: 52px;
+    font-size: 48px;
     font-weight: 900;
     display: none;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Shape Specific Layout Overrides */
-/* Semi-Circle: content at bottom */
-.mode-semi #widget-container {
-    height: calc(var(--size) * 0.6);
-    align-items: flex-end;
-}
-
-.mode-semi #content-layer {
-    justify-content: flex-end;
-    padding-bottom: 20px;
-}
-
-.mode-semi #main-svg {
-    height: 166%;
-    top: -33%;
-}
-
-/* Wait, easy SVG viewbox manipulation is better. 
-   We will keep container square and move text? No, StreamElements iframe is fixed size usually.
-   Better: Center everything relative to 500x500 viewBox. */
-
+/* Mode Overrides */
 .mode-full #center-percent {
     display: block;
 }
 
+.has-image #center-percent {
+    display: none !important;
+}
+
+/* Hide percent if image showing */
+
+/* For Full Circle with Image or Text */
 .mode-full #text-wrapper {
     position: absolute;
     bottom: -60px;
 }
 
-/* Push title below circle */
+/* Semi Circle Layout */
+.mode-semi #widget-container {
+    align-items: flex-end;
+    height: calc(var(--size)*0.6);
+}
+
+.mode-semi #content-layer {
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+
+.mode-semi #custom-image {
+    top: 60%;
+}
+
+/* Push image down slightly in arch */
 
 /* Dev Controls */
 #dev-controls {
@@ -158,13 +182,4 @@ body.dev {
 
 #dev-controls.hidden {
     display: none;
-}
-
-#dev-controls select,
-#dev-controls button {
-    margin: 5px;
-    padding: 5px;
-    background: #333;
-    color: #fff;
-    border: 1px solid #555;
 }
