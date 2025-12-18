@@ -114,16 +114,22 @@ function drawShape() {
     let d = '';
     // SVG Center 250,250 Redius 200
     if (mode === 'full') {
-        d = describeArc(250, 250, 200, 0, 359.99);
-        setTransforms('rotate(-90 250 250)');
+        d = describeArc(250, 250, 200, 0, 359.9);
+        setTransforms('');
     } else if (mode === 'semi') {
-        d = describeArc(250, 250, 200, 180, 360);
+        // Upright Arch (Top half): 270° (Left) to 90° (Right) but clockwise
+        d = describeArc(250, 250, 200, 225, 495); // Wait, 270 to 450
+        // Actually semi is 180 deg. 270 to 450.
+        d = describeArc(250, 250, 200, 270, 450);
         setTransforms('');
     } else if (mode === 'arc75') {
-        d = describeArc(250, 250, 200, 135, 405);
+        // 270 deg Arc centered at Top (360)
+        // 225 (Bottom-Left) to 495 (Bottom-Right)
+        d = describeArc(250, 250, 200, 225, 495);
         setTransforms('');
     } else if (mode === 'openbottom') {
-        d = describeArc(250, 250, 200, 110, 430);
+        // Horseshoe (300 deg): 210 to 510
+        d = describeArc(250, 250, 200, 210, 510);
         setTransforms('');
     }
 
@@ -150,6 +156,9 @@ function updateProgress(add) {
         const p = document.getElementById(id);
         if (p) {
             const len = p.getTotalLength();
+            // Clockwise path: start is at startAngle. 
+            // strokeDashoffset reduces from the end.
+            // If length is 100 and pct is 0.1, offset is 90. Progress shows 10 from start.
             p.style.strokeDashoffset = len * (1 - pct);
         }
     });
@@ -194,18 +203,20 @@ function setTransforms(t) {
 
 function describeArc(x, y, radius, startAngle, endAngle) {
     function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
+        // 0 is Top
         const angleInRadians = (angleInDegrees - 90) * Math.PI / 180.0;
         return {
             x: centerX + (radius * Math.cos(angleInRadians)),
             y: centerY + (radius * Math.sin(angleInRadians))
         };
     }
-    const start = polarToCartesian(x, y, radius, endAngle);
-    const end = polarToCartesian(x, y, radius, startAngle);
+    const start = polarToCartesian(x, y, radius, startAngle);
+    const end = polarToCartesian(x, y, radius, endAngle);
     const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+    // Sweep-flag 1 for Clockwise
     return [
         "M", start.x, start.y,
-        "A", radius, radius, 0, largeArcFlag, 0, end.x, end.y
+        "A", radius, radius, 0, largeArcFlag, 1, end.x, end.y
     ].join(" ");
 }
 
