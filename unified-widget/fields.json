@@ -1,7 +1,7 @@
 {
   "section_appearance": {
     "type": "header",
-    "label": "🎨 Widget Design"
+    "label": "🎨 Widget Shape & Style"
   },
   "shapeMode": {
     "type": "dropdown",
@@ -25,6 +25,19 @@
     },
     "group": "Appearance"
   },
+  "widgetSize": {
+    "type": "slider",
+    "label": "Global Scale (px)",
+    "value": 420,
+    "min": 200,
+    "max": 800,
+    "step": 10,
+    "group": "Appearance"
+  },
+  "section_colors": {
+    "type": "header",
+    "label": "🌈 Color Settings"
+  },
   "primaryColor": {
     "type": "colorpicker",
     "label": "Primary Color (Gradient Start)",
@@ -45,46 +58,19 @@
   },
   "glowColor": {
     "type": "colorpicker",
-    "label": "Glow Color",
+    "label": "Neon Glow Color",
     "value": "rgba(255, 45, 149, 0.6)",
     "group": "Colors"
   },
   "textColor": {
     "type": "colorpicker",
-    "label": "Text Color",
+    "label": "Text/Number Color",
     "value": "#ffffff",
     "group": "Colors"
   },
-  "section_image": {
-    "type": "header",
-    "label": "🖼️ Center Image"
-  },
-  "imageUrl": {
-    "type": "image-input",
-    "label": "Upload Custom Image",
-    "group": "Image"
-  },
-  "imageSize": {
-    "type": "slider",
-    "label": "Image Scale (%)",
-    "value": 50,
-    "min": 10,
-    "max": 100,
-    "step": 1,
-    "group": "Image"
-  },
-  "imageOffsetY": {
-    "type": "slider",
-    "label": "Vertical Offset",
-    "value": 0,
-    "min": -100,
-    "max": 100,
-    "step": 5,
-    "group": "Image"
-  },
   "section_content": {
     "type": "header",
-    "label": "📝 Content & Text"
+    "label": "📝 Text & Content"
   },
   "titleText": {
     "type": "text",
@@ -98,54 +84,72 @@
     "value": "Poppins",
     "group": "Content"
   },
+  "currencySymbol": {
+    "type": "text",
+    "label": "Prefix (e.g. $)",
+    "value": "",
+    "group": "Content"
+  },
+  "section_image": {
+    "type": "header",
+    "label": "🖼️ Center Image"
+  },
+  "imageUrl": {
+    "type": "image-input",
+    "label": "Center Image (Optional)",
+    "group": "Image"
+  },
+  "imageSize": {
+    "type": "slider",
+    "label": "Image Scale (%)",
+    "value": 50,
+    "min": 10,
+    "max": 100,
+    "step": 1,
+    "group": "Image"
+  },
+  "imageOffsetY": {
+    "type": "slider",
+    "label": "Image Vertical Offset",
+    "value": 0,
+    "min": -100,
+    "max": 100,
+    "step": 5,
+    "group": "Image"
+  },
+  "section_data": {
+    "type": "header",
+    "label": "📊 Goal Settings"
+  },
   "goalValue": {
     "type": "number",
-    "label": "Goal Target",
+    "label": "Goal Target Amount",
     "value": 100,
     "group": "Goal Data"
   },
   "startingValue": {
     "type": "number",
-    "label": "Starting Value",
+    "label": "Starting Progress",
     "value": 0,
     "group": "Goal Data"
   },
-  "currencySymbol": {
-    "type": "text",
-    "label": "Value Prefix (e.g. $)",
-    "value": "",
-    "group": "Goal Data"
-  },
-  "section_behavior": {
-    "type": "header",
-    "label": "⚙️ Behavior"
-  },
   "eventType": {
     "type": "dropdown",
-    "label": "Event Trigger",
+    "label": "Event Type",
     "value": "subscriber",
     "options": {
-      "follower": "Follower (+1)",
-      "subscriber": "Subscriber (+1)",
-      "tip": "Tip (Amount)",
-      "cheer": "Cheer (Amount)",
+      "follower": "Followers",
+      "subscriber": "Subscribers",
+      "tip": "Tips/Donations",
+      "cheer": "Bits/Cheers",
       "manual": "Manual Only"
     },
-    "group": "Behavior"
+    "group": "Goal Data"
   },
   "enableCommands": {
     "type": "checkbox",
-    "label": "Enable Chat Commands (!add, !set)",
+    "label": "Enable Chat Commands",
     "value": true,
     "group": "Behavior"
-  },
-  "widgetSize": {
-    "type": "slider",
-    "label": "Widget Scale (px)",
-    "value": 420,
-    "min": 200,
-    "max": 800,
-    "step": 10,
-    "group": "Layout"
   }
 }

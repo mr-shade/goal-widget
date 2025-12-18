@@ -72,11 +72,25 @@ function applyStyles() {
     r.style.setProperty('--text', settings.textColor);
     r.style.setProperty('--size', settings.widgetSize + 'px');
 
+    // Font Loading and Application
+    if (settings.fontFamily) {
+        document.body.style.fontFamily = `'${settings.fontFamily}', sans-serif`;
+        // Load Google Font dynamically
+        const fontId = 'custom-font-' + settings.fontFamily.replace(/\s+/g, '-').toLowerCase();
+        if (!document.getElementById(fontId)) {
+            const link = document.createElement('link');
+            link.id = fontId;
+            link.rel = 'stylesheet';
+            link.href = `https://fonts.googleapis.com/css2?family=${settings.fontFamily.replace(/\s+/g, '+')}:wght@400;700;900&display=swap`;
+            document.head.appendChild(link);
+        }
+    }
+
     // Image Logic
     const imgEl = document.getElementById('custom-image');
     if (settings.imageUrl && settings.imageUrl.trim() !== '') {
         r.style.setProperty('--img-url', `url(${settings.imageUrl})`);
-        r.style.setProperty('--img-scale', settings.imageSize + '%'); // CSS handles px conversion via calc or just use % of container
+        r.style.setProperty('--img-scale', settings.imageSize + '%');
         r.style.setProperty('--img-offset-y', settings.imageOffsetY + 'px');
         imgEl.classList.remove('hidden');
         document.body.classList.add('has-image');
@@ -90,7 +104,6 @@ function applyStyles() {
 
     const titleEl = document.getElementById('title-el');
     titleEl.innerText = settings.titleText;
-    titleEl.style.fontFamily = settings.fontFamily;
 
     document.body.className = `mode-${settings.shapeMode} style-${settings.styleMode} ${settings.imageUrl ? 'has-image' : ''}`;
     if (typeof isDev !== 'undefined' && isDev) document.body.classList.add('dev');

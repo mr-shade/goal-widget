@@ -105,6 +105,8 @@ body.dev {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 1; /* Below text (z-index 2) */
+    pointer-events: none;
 }
 
 #custom-image.hidden {
