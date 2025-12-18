@@ -139,10 +139,8 @@ function drawShape() {
             el.setAttribute('d', d);
             const len = el.getTotalLength();
             el.style.strokeDasharray = len;
-            // The track should always be fully visible (offset 0)
-            // The progress and glow should start at full length (offset len) 
-            // and reduce as progress increases.
-            el.style.strokeDashoffset = (id === 'track-path') ? 0 : len;
+            // Track is fully visible (offset 0), others start hidden (offset len)
+            el.style.strokeDashoffset = id === 'track-path' ? 0 : len;
         }
     });
 }
@@ -150,9 +148,6 @@ function drawShape() {
 function updateProgress(add) {
     current += add;
     if (current > target) current = target;
-
-    // Use a specific key per shape to allow different states if needed, 
-    // or keep one unified key 'goal_unified_current'
     SE_API.store.set('goal_unified_current', current);
 
     const safeTarget = target > 0 ? target : 100;
