@@ -168,8 +168,18 @@ function updateProgress(add) {
     const dispCurrent = isNaN(current) ? 0 : Math.floor(current);
     const dispTarget = isNaN(target) ? 100 : target;
 
-    document.getElementById('value-el').innerText = `${prefix}${dispCurrent} / ${prefix}${dispTarget}`;
-    document.getElementById('center-percent').innerText = Math.floor(pct * 100) + '%';
+    // Update split values
+    const currentEl = document.getElementById('current-val');
+    const goalEl = document.getElementById('goal-val');
+    
+    if (currentEl) currentEl.innerText = `${prefix}${dispCurrent}`;
+    if (goalEl) goalEl.innerText = `${prefix}${dispTarget}`;
+
+    // For circle mode, we might still want the center percent or main text logic 
+    // but CSS handles hiding/showing.
+    if (document.getElementById('center-percent')) {
+        document.getElementById('center-percent').innerText = Math.floor(pct * 100) + '%';
+    }
 }
 
 function handleCommand(data) {

@@ -105,7 +105,8 @@ body.dev {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    z-index: 1; /* Below text (z-index 2) */
+    z-index: 1;
+    /* Below text (z-index 2) */
     pointer-events: none;
 }
 
@@ -120,23 +121,35 @@ body.dev {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 5px;
 }
 
-#value-el {
-    font-size: 32px;
+#value-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+#current-val,
+#goal-val {
+    font-size: 36px;
+    /* Increased size */
     font-weight: 900;
-    margin-top: 5px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #center-percent {
     font-size: 48px;
     font-weight: 900;
+    /* Extra bold */
     display: none;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Mode Overrides */
+
+/* --- Full Circle --- */
 .mode-full #center-percent {
     display: block;
 }
@@ -145,27 +158,111 @@ body.dev {
     display: none !important;
 }
 
-/* Hide percent if image showing */
-
-/* For Full Circle with Image or Text */
 .mode-full #text-wrapper {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+/* If image present, push text down */
+.mode-full.has-image #text-wrapper {
+    top: auto;
     bottom: -60px;
+    transform: translate(-50%, 0);
 }
 
-/* Semi Circle Layout */
+
+/* --- Arches (Semi, Arc75, OpenBottom) --- */
 .mode-semi #widget-container {
-    align-items: flex-end;
-    height: calc(var(--size)*0.6);
+    height: var(--size);
+    align-items: center;
 }
 
-.mode-semi #content-layer {
-    justify-content: flex-end;
-    padding-bottom: 10px;
+/* Semi: Shift SVG down to make room for Title at top */
+.mode-semi #main-svg {
+    transform: translateY(40px);
 }
 
+/* Position Values just below the endpoints for each shape */
+
+/* Semi: Endpoints at ~50% height (minus shift). High up. */
+.mode-semi #value-container {
+    position: absolute;
+    bottom: 155px;
+    /* Aligns with shifted equator */
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 45px;
+}
+
+/* OpenBottom (Horseshoe): Endpoints at ~70% height. Lower. */
+.mode-openbottom #value-container {
+    position: absolute;
+    bottom: 75px;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 55px;
+    /* Slightly tighter for horseshoe tips */
+}
+
+/* Arc75: Endpoints at ~80% height. Very low. */
+.mode-arc75 #value-container {
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+
+.mode-semi #current-val,
+.mode-arc75 #current-val,
+.mode-openbottom #current-val {
+    text-align: left;
+    color: var(--primary);
+}
+
+.mode-semi #goal-val,
+.mode-arc75 #goal-val,
+.mode-openbottom #goal-val {
+    text-align: right;
+    color: var(--secondary);
+}
+
+/* Position Title */
+/* Semi: Top Center */
+.mode-semi #title-el {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+}
+
+/* Arc/Open: Bottom Center */
+.mode-arc75 #title-el,
+.mode-openbottom #title-el {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* Image Positioning Refinement per shape */
 .mode-semi #custom-image {
-    top: 60%;
+    bottom: 0px;
+    top: auto;
+    transform: translate(-50%, calc(0% + var(--img-offset-y)));
+}
+
+.mode-openbottom #custom-image,
+.mode-arc75 #custom-image {
+    top: 50%;
+    transform: translate(-50%, calc(-50% + var(--img-offset-y)));
 }
 
 /* Push image down slightly in arch */
