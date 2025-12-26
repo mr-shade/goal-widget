@@ -188,10 +188,12 @@ body.dev {
 /* Position Values just below the endpoints for each shape */
 
 /* Semi: Endpoints at ~50% height (minus shift). High up. */
+/* Semi: Endpoints at ~50% visual height (shifted).
+   Visual Bottom Gap is approx 170px. 
+   Setting bottom: 115px puts text below the endpoints. */
 .mode-semi #value-container {
     position: absolute;
-    bottom: 155px;
-    /* Aligns with shifted equator */
+    bottom: 115px;
     left: 0;
     width: 100%;
     justify-content: space-between;
@@ -199,20 +201,25 @@ body.dev {
 }
 
 /* OpenBottom (Horseshoe): Endpoints at ~70% height. Lower. */
+/* OpenBottom (Horseshoe): Endpoints are lower visually.
+   Visual Bottom Gap is approx 65px.
+   Setting bottom: 20px puts text below the endpoints. */
 .mode-openbottom #value-container {
     position: absolute;
-    bottom: 75px;
+    bottom: 20px;
     left: 0;
     width: 100%;
     justify-content: space-between;
     padding: 0 55px;
-    /* Slightly tighter for horseshoe tips */
 }
 
 /* Arc75: Endpoints at ~80% height. Very low. */
+/* Arc75: Endpoints are intermediate.
+   Visual Bottom Gap is approx 90px.
+   Setting bottom: 45px puts text below. */
 .mode-arc75 #value-container {
     position: absolute;
-    bottom: 35px;
+    bottom: 45px;
     left: 0;
     width: 100%;
     justify-content: space-between;
@@ -235,9 +242,11 @@ body.dev {
 
 /* Position Title */
 /* Semi: Top Center */
+/* Semi: Top Center - Move closer to arc */
 .mode-semi #title-el {
     position: absolute;
-    top: 20px;
+    top: 60px;
+    /* Pushed down closer to the arc */
     left: 0;
     width: 100%;
 }
