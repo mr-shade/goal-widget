@@ -1,0 +1,235 @@
+{
+  "goal": {
+    "type": "number",
+    "label": "Goal (number)",
+    "value": 100,
+    "step": 1,
+    "group": "Data"
+  },
+  "cur": {
+    "label": "Currency",
+    "type": "text",
+    "group": "Data",
+    "value": "$"
+  },
+  "goalType": {
+    "type": "dropdown",
+    "label": "Choose goal type:",
+    "value": "donation",
+    "options": {
+      "follower": "Followers goal",
+      "subscriber": "Sub goal",
+      "tip": "Donation goal",
+      "cheer": "Bits goal"
+    },
+    "group": "Data"
+  },
+  "resubs": {
+    "label": "Count resubs",
+    "type": "checkbox",
+    "group": "Data",
+    "value": false
+  },
+  "timeframe": {
+    "type": "dropdown",
+    "label": "Goal time period:",
+    "options": {
+      "total": "Total",
+      "month": "Month",
+      "week": "Week",
+      "session": "Session",
+      "goal": "Manual reset"
+    },
+    "group": "Data"
+  },
+  "iconchange": {
+    "type": "dropdown",
+    "label": "icon Change:",
+    "options": {
+      "M16.69,14.24C16.69,14.25,16.69,14.25,16.69,14.24c-0.01,0.04-0.01,0.07-0.02,0.1c-0.02,0.05-0.07,0.09-0.12,0.13l-6.33,4.36c-0.14,0.09-0.32,0.09-0.46,0l-6.32-4.36c-0.06-0.04-0.09-0.08-0.12-0.13c-0.03-0.05-0.04-0.11-0.04-0.16l0.03-0.02c0-0.05,0.02-0.1,0.04-0.15c0-0.01,0.01-0.02,0.02-0.03L9.69,1.87c0.12-0.22,0.41-0.25,0.57-0.08c0.02,0.02,0.04,0.05,0.06,0.08l6.32,12.12c0.02,0.03,0.04,0.07,0.05,0.1c0,0.02,0.01,0.04,0.01,0.07v0.01l0.01,0.01C16.71,14.2,16.7,14.22,16.69,14.24C16.69,14.24,16.69,14.24,16.69,14.24z": "Diamond Icon",
+      "M6.03,6.32c2.18-2.18,5.76-2.18,7.94,0l0,0c2.18,2.18,2.18,5.76,0,7.94l0,0c-2.18,2.18-5.76,2.18-7.94,0l0,0 C3.85,12.08,3.85,8.51,6.03,6.32z M14.97,18.77H5.03c-1.94,0-3.51-1.58-3.51-3.51V5.33c0-1.94,1.58-3.51,3.51-3.51h9.93 c1.94,0,3.51,1.58,3.51,3.51v9.93C18.48,17.2,16.9,18.77,14.97,18.77z M5.03,2.36c-1.64,0-2.97,1.33-2.97,2.97v9.93 c0,1.64,1.33,2.97,2.97,2.97h9.93c1.64,0,2.97-1.33,2.97-2.97V5.33c0-1.64-1.33-2.97-2.97-2.97H5.03z": "Box-Circle Icon",
+      "M14.53,8.74c0.97-0.97,2.55-0.97,3.52,0l0,0c0.97,0.97,0.97,2.55,0,3.52l0,0c-0.97,0.97-2.55,0.97-3.52,0l0,0 C13.56,11.29,13.56,9.71,14.53,8.74z M8.04,2.25c0.97-0.97,2.55-0.97,3.52,0l0,0c0.97,0.97,0.97,2.55,0,3.52l0,0 c-0.97,0.97-2.55,0.97-3.52,0l0,0C7.07,4.8,7.07,3.22,8.04,2.25z M8.44,14.82c0.97-0.97,2.55-0.97,3.52,0l0,0 c0.97,0.97,0.97,2.55,0,3.52l0,0c-0.97,0.97-2.55,0.97-3.52,0l0,0C7.48,17.37,7.48,15.79,8.44,14.82z M1.95,8.33 c0.97-0.97,2.55-0.97,3.52,0l0,0c0.97,0.97,0.97,2.55,0,3.52l0,0c-0.97,0.97-2.55,0.97-3.52,0l0,0C0.98,10.88,0.98,9.3,1.95,8.33z": "Quadra Circle Icon",
+      "M11.11,5.66v3.57h3.45v2.3h-3.45v3.61H8.78v-3.61H5.31v-2.3h3.46V5.66H11.11z M10,19.04 c-4.82,0-8.75-3.92-8.75-8.75S5.18,1.55,10,1.55s8.75,3.92,8.75,8.75S14.82,19.04,10,19.04z M10,2.94c-4.06,0-7.36,3.3-7.36,7.36 s3.3,7.36,7.36,7.36c4.06,0,7.36-3.3,7.36-7.36S14.06,2.94,10,2.94z": "Circle Plus Icon",
+      "M10,17.95c-4.22,0-7.65-3.43-7.65-7.65c0-4.22,3.43-7.65,7.65-7.65c4.22,0,7.65,3.43,7.65,7.65 C17.65,14.51,14.22,17.95,10,17.95z M10,4.26c-3.33,0-6.03,2.71-6.03,6.03c0,3.33,2.71,6.03,6.03,6.03c3.33,0,6.03-2.71,6.03-6.03 C16.03,6.97,13.33,4.26,10,4.26z": "Circle Icon"
+    },
+    "group": " Goal Icon Change"
+  },
+  "goalTitle": {
+    "type": "text",
+    "label": "Goal title (text)",
+    "value": "Donation goal",
+    "group": "Data"
+  },
+  "align": {
+    "type": "dropdown",
+    "label": "Goal position",
+    "value": "hor",
+    "options": {
+      "hor": "Horizontal",
+      "vert": "Vertical (number on the right)",
+      "vertleft": "Vertical (number on the left)"
+    },
+    "group": "Styling"
+  },
+  "titleFontName": {
+    "type": "googleFont",
+    "label": "Font name",
+    "group": "Styling"
+  },
+  "titleFontSize": {
+    "type": "number",
+    "label": "Title font size",
+    "value": 15,
+    "group": "Styling"
+  },
+  "titleFontColor": {
+    "type": "colorpicker",
+    "label": "Text color",
+    "value": "#fffefe",
+    "group": "Styling"
+  },
+  "fontColor": {
+    "type": "colorpicker",
+    "label": "Text background color",
+    "value": "#fffefe",
+    "group": "Styling"
+  },
+  "fontSize": {
+    "label": "Numbers font size",
+    "value": 15,
+    "type": "number",
+    "group": "Styling"
+  },
+  "fontWeight": {
+    "label": "Numbers font weight",
+    "type": "dropdown",
+    "options": {
+      "300": "Thin",
+      "400": "Regular",
+      "500": "Medium",
+      "600": "Semibold",
+      "700": "Bold",
+      "800": "Extra Bold",
+      "900": "Black"
+    },
+    "group": "Styling",
+    "value": "500"
+  },
+  "titleFontWeight": {
+    "label": "Title font weight",
+    "type": "dropdown",
+    "options": {
+      "300": "Thin",
+      "400": "Regular",
+      "500": "Medium",
+      "600": "Semibold",
+      "700": "Bold",
+      "800": "Extra Bold",
+      "900": "Black"
+    },
+    "group": "Styling",
+    "value": "700"
+  },
+  "fillcolor": {
+    "type": "colorpicker",
+    "label": "Slide Gradient color-1",
+    "value": "#ffdbf3",
+    "group": "Color"
+  },
+  "fillcolor2": {
+    "type": "colorpicker",
+    "label": "Slide Gradient color-2",
+    "value": "#ffdbf3",
+    "group": "Color"
+  },
+  "fillcolor3": {
+    "type": "colorpicker",
+    "label": "Slide Gradient color-3",
+    "value": "#ffdbf3",
+    "group": "Color"
+  },
+  "fillcolor4": {
+    "type": "colorpicker",
+    "label": "Slide Gradient color-4",
+    "value": "#ffdbf3",
+    "group": "Color"
+  },
+  "fillcolor5": {
+    "type": "colorpicker",
+    "label": "Slide Gradient color-5",
+    "value": "#ffdbf3",
+    "group": "Color"
+  },
+  "fillcolor6": {
+    "type": "colorpicker",
+    "label": "Slide Gradient color-6",
+    "value": "#ffdbf3",
+    "group": "Color"
+  },
+  "bg1": {
+    "type": "colorpicker",
+    "label": "Background color",
+    "value": "#ffdbf3",
+    "group": "Color"
+  },
+  "bg2": {
+    "type": "colorpicker",
+    "label": "Background color 2",
+    "value": "#ffdbf3",
+    "group": "Color"
+  },
+  "border1": {
+    "type": "colorpicker",
+    "label": "Border color",
+    "value": "#ffdbf3",
+    "group": "Color"
+  },
+  "butter": {
+    "type": "colorpicker",
+    "label": "Icon color",
+    "value": "#ffdbf3",
+    "group": "Color"
+  },
+  "restcolor": {
+    "type": "colorpicker",
+    "label": "Progress Background color",
+    "value": "#ffdbf3",
+    "group": "Color"
+  },
+  "neoncol1": {
+    "label": "Neon Color1",
+    "type": "colorpicker",
+    "value": "#302e40",
+    "group": "Neon Glow Color"
+  },
+  "neoncol2": {
+    "label": "Neon Color2",
+    "type": "colorpicker",
+    "value": "#302e40",
+    "group": "Neon Glow Color"
+  },
+  "neoncol3": {
+    "label": "Neon Color3",
+    "type": "colorpicker",
+    "value": "#302e40",
+    "group": "Neon Glow Color"
+  },
+  "neoncol4": {
+    "label": "Neon Color4",
+    "type": "colorpicker",
+    "value": "#302e40",
+    "group": "Neon Glow Color"
+  },
+  "neoncol5": {
+    "label": "Neon Color5",
+    "type": "colorpicker",
+    "value": "#302e40",
+    "group": "Neon Glow Color"
+  },
+  "neoncol6": {
+    "label": "Neon Color6",
+    "type": "colorpicker",
+    "value": "#302e40",
+    "group": "Neon Glow Color"
+  }
+}

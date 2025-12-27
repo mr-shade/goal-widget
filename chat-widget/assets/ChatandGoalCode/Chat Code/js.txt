@@ -1,0 +1,781 @@
+    function _0x1c3c(_0x3e9d40, _0x261dd6) {
+        const _0x1c3cd4 = _0x261d();
+        return _0x1c3c = function (_0x2a1b71, _0x2cf8e8) {
+            _0x2a1b71 = _0x2a1b71 - 0x0;
+            let _0x2f96b4 = _0x1c3cd4[_0x2a1b71];
+            return _0x2f96b4;
+        }, _0x1c3c(_0x3e9d40, _0x261dd6);
+    }
+    const _0x212728 = _0x1c3c;
+    (function (_0x5e6a7a, _0x22d2e5) {
+        const _0x173f6f = _0x1c3c, _0x53e426 = _0x5e6a7a();
+        while (!![]) {
+            try {
+                const _0x388885 = parseInt(_0x173f6f(0x29)) / 0x1 * (parseInt(_0x173f6f(0x13)) / 0x2) + parseInt(_0x173f6f(0x8a)) / 0x3 + parseInt(_0x173f6f(0xd7)) / 0x4 * (parseInt(_0x173f6f(0xbd)) / 0x5) + parseInt(_0x173f6f(0xc5)) / 0x6 + -parseInt(_0x173f6f(0xb8)) / 0x7 + -parseInt(_0x173f6f(0x8d)) / 0x8 * (parseInt(_0x173f6f(0x7b)) / 0x9) + -parseInt(_0x173f6f(0x6f)) / 0xa * (parseInt(_0x173f6f(0x2f)) / 0xb);
+                if (_0x388885 === _0x22d2e5)
+                    break;
+                else
+                    _0x53e426['push'](_0x53e426['shift']());
+            } catch (_0x4c89fa) {
+                _0x53e426['push'](_0x53e426['shift']());
+            }
+        }
+    }(_0x261d, 0x4ee5b));
+    let totalMessages = 0x0, nickColor = 'user', removeSelector, nameColor, channelName, hideCommands = 'no', ignoredUsers = [], msgAlign, currency, msgGlow, nameGlow, outline, lightercolor, darkcolor, darkcolor2, fieldData, largeEmotes, badgesCustom, badgesDisplay, userType, pronounsOn, pronounsCache = {}, pronounsbadge, pronounsObj = { 'pronouns': {} };
+    function _0x261d() {
+        const _0x27fa46 = [
+            'testMessageVip',
+            'alertson',
+            '43285909-412c-4eee-b80d-89123f72ba53142',
+            'data',
+            'testMessageSub',
+            ' subs',
+            'parseHTML',
+            ' <div class= "alertboxs1 gradient-alert1" style= " "> <div class= "alertboxs11 gradient-alert101" style= "color: {msgcolor1};  "> <div class= "alertboxs span" style= "  "> <div class= "alerttext border: none ">  ',
+            '.animation1',
+            'appendTo',
+            ' ">     <div class= "blur">   <div class= "zoom-x">     <div class="sach-animi">   <div class= "acnamebox   " style= "color: {namecolor4}; background-color: {#ffffff00} ; filter: drop-shadow(0 0 1px {namecolor4}) drop-shadow(0 0 50px {namecolor4});-webkit-text-stroke: 0.5px {namebordercolor4};   "> <img class= "badg_icon" src= " " style= " left: 10px;" >    <div class= "badgescont ">    <div class= "badgesbox " style="    ">',
+            'style',
+            '<span>',
+            'https:',
+            '43285909-412c-4eee-b80d-89228ba78142',
+            '</span>    <span class= "pronouns "></span> <svg class= "acstar" width= "60" height= "60 " viewBox= "0 0 266 240" xml:space= "preserve " xmlns= " http://www.w3.org/2000/svg "> <path style= "fill: {namecolor3};fill-opacity:1;" d="M35.91,129.15l0-18.48c48.78,0,88.32-39.54,88.32-88.32l18.48,0c0,48.78,39.54,88.32,88.32,88.32l0,18.48 c-48.78,0-88.32,39.54-88.32,88.32h-18.48C124.23,168.69,84.69,129.15,35.91,129.15z"/></svg> <svg class= "rectf" style= "filter: drop-shadow(0 0 10px {namecolor3}) drop-shadow(0 0 60px {namecolor3}) ;"> </svg>  </div>    <div class= "msgcont "style="margin-top: 23px;" >        <div class= "messagebox" style= "color: {msgcolor3};background-color: #ffffff00;   ">  <svg class= "rectt"style= ""> </svg>  <svg class= "rectt"style= ""> </svg>  <svg class= "adbox3" width= "60" height= "60 " viewBox= "0 0 266 240" xml:space= "preserve " xmlns= " http://www.w3.org/2000/svg "> <path style= "fill: {boxcolor};fill-opacity:1;" d="M133,210.43c-49.87,0-90.43-40.57-90.43-90.43c0-49.86,40.57-90.42,90.43-90.42 c49.86,0,90.42,40.57,90.42,90.42C223.43,169.86,182.86,210.43,133,210.43z M133,48.73c-39.3,0-71.27,31.97-71.27,71.26 c0,39.3,31.97,71.27,71.27,71.27c39.29,0,71.26-31.97,71.26-71.27C204.27,80.7,172.3,48.73,133,48.73z"/></svg>     <video class= "follow_icon2" src= "  " autoplay muted playsinline> </video>  <img class= "follow_icon1" src= " " style= " ">  <span class= "message "style="filter: drop-shadow(0 0 3px {followb}) drop-shadow(0 0 18px {followb}) ;-webkit-text-stroke: 0.5px {followb};">   ',
+            'badgesDisplay',
+            'vip',
+            'remove',
+            'Follower',
+            'block',
+            ' <svg class= "svgbadge " xmlns= "http://www.w3.org/2000/svg " xmlns:svg= "http://www.w3.org/2000/svg " viewBox= "0 0 30.074135 21.467426 " version= "1.1 " id= "svg5 " xml:space= "preserve "><defs id= "defs2 "/><g id= "layer1 " transform= "translate(-72.032296,-84.451693) "><path id= "rect237 " style= "fill:{namecolor};stroke-width:0 " d= "m 76.467684,84.451693 c -2.457256,0 -4.435388,1.978132 -4.435388,4.435388 v 12.596649 c 0,2.45725 1.978132,4.43539 4.435388,4.43539 h 12.774414 c 2.457256,0 4.435388,-1.97814 4.435388,-4.43539 v -1.44074 l 8.403624,3.88762 0.0253,-8.658906 -0.3328,-8.654252 -8.096144,4.028178 v -1.758549 c 0,-2.457256 -1.978132,-4.435388 -4.435388,-4.435388 z "/></g></svg> ',
+            'testMessageLong',
+            '<svg width= "260.306 " height= "261.125 " viewBox= "0 0 260.306 261.125 " xmlns= "http://www.w3.org/2000/svg ">   <path style= "fill:#fff;stroke:none;stroke-width:2.236;stroke-linecap:square;paint-order:markers stroke fill " d= "M249.344 55.868s-49.869 46.12-66.367 73.49c0 0-44.62-8.248-65.242 35.621 0 0-4.124 9.75-3.374 20.998 0 0 4.43 12.464-21.816 36.086 0 0 60.06 4.784 85.183-8.34 25.122-13.123 26.996-44.244 26.621-47.619-.374-3.374-.374-16.498-.374-16.498l73.115-65.991s26.997 32.246 18.748 64.491c-8.249 32.246-17.998 36.746-36.37 57.368-18.373 20.623-17.248 10.499-18.748 31.871-1.5 21.373-17.998 50.994-54.368 58.868-36.37 7.874-82.115-9.374-91.864-16.123-9.749-6.75-56.618-37.87-57.368-96.738S55.868 93.363 70.491 79.115C85.114 64.867 116.235 36.37 163.48 37.12c47.244.75 68.991 2.25 85.864 18.748z " transform= "translate(-37.1 -37.106) "/> </svg>',
+            'isAction',
+            'round',
+            'raid-latest',
+            'listener',
+            'prependTo',
+            'msgId',
+            '100vKWoLv',
+            'length',
+            'min',
+            '.chat-box div:nth-last-child(-n+{msgLimitAmount})',
+            'https:https:',
+            'abs',
+            'https://static-cdn.jtvnw.net/badges/v1/b817aba4-fad8-49e2-b88a-7cc744dfa6ec/3',
+            '#b22222',
+            'none',
+            '.chat-box div:nth-last-child(-n+15)',
+            'moderator/1',
+            'follower-latest',
+            '27ojYJMs',
+            'pronounsDiv',
+            'pronounsOn',
+            'testMessageFirst',
+            'delete-message',
+            'random',
+            '</span> just resubbed x',
+            'currency',
+            '    </span>    </div>    </div>  </div></div>',
+            'gifted',
+            'msgLimitAmount',
+            '.vip',
+            'lilypie',
+            'outline',
+            '100%,',
+            '1391826vJgRuq',
+            ':wght@400;500;600;700&display=swap\x27); </style>',
+            'addClass',
+            '716792COPjOR',
+            '   </span>    <span class= "pronouns "></span> <svg class= "acstar" width= "60" height= "60 " viewBox= "0 0 266 240" xml:space= "preserve " xmlns= " http://www.w3.org/2000/svg "> <path style= "fill: {namecolor};fill-opacity:1;" d="M35.91,129.15l0-18.48c48.78,0,88.32-39.54,88.32-88.32l18.48,0c0,48.78,39.54,88.32,88.32,88.32l0,18.48 c-48.78,0-88.32,39.54-88.32,88.32h-18.48C124.23,168.69,84.69,129.15,35.91,129.15z"/></svg>  <svg class= "rectf"style= "filter: drop-shadow(0 0 10px {namecolor}) drop-shadow(0 0 60px {namecolor}) ;"> </svg>   </div>    <div class= "msgcont ">       <div class= "messagebox" style= "color: {msgcolor1};background-color: #ffffff00;"> <svg class= "rectt"style= ""> </svg> <svg class= "adbox" width= "60" height= "60 " viewBox= "0 0 266 240" xml:space= "preserve " xmlns= " http://www.w3.org/2000/svg "> <path style= "fill: {boxcolor};fill-opacity:1;" d="M97.45,84.45c19.54-19.54,51.55-19.54,71.09,0l0,0c19.56,19.56,19.54,51.55,0,71.09l0,0 c-19.54,19.54-51.53,19.56-71.09,0l0,0C77.91,136,77.91,104,97.45,84.45z M177.47,195.92H88.53c-17.34,0-31.45-14.11-31.45-31.45 V75.53c0-17.34,14.11-31.45,31.45-31.45h88.94c17.34,0,31.45,14.11,31.45,31.45v88.94C208.92,181.81,194.81,195.92,177.47,195.92z M88.53,48.98c-14.64,0-26.55,11.91-26.55,26.55v88.94c0,14.64,11.91,26.55,26.55,26.55h88.94c14.64,0,26.55-11.91,26.55-26.55 V75.53c0-14.64-11.91-26.55-26.55-26.55H88.53z"/></svg>   <div class="icons">   <span class= "message "style="filter: drop-shadow(0 0 3px {adminb}) drop-shadow(0 0 18px {adminb}) ;">   ',
+            'Just checking in with a test message!',
+            'detail',
+            'indexOf',
+            '<svg class= "svgbadge " id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve"> <style type="text/css"> .st0{fill:{namecolor2};} </style> <path class="st0" d="M87.26,32.49L33.39,74.35l11.44,10.54l-8.88,1.32l-8.4-7.74L8.15,94.62l-2.86-0.04L5,91.72l14.46-20.69 l-8.4-7.74l0.59-8.96l11.44,10.54l37.2-57.21L91,1.38L87.26,32.49z"/> </svg>',
+            'msg ',
+            'bottom',
+            'search',
+            'fieldData',
+            '45%)',
+            '<img class= "default " src= "',
+            'mod',
+            '#5B99FF',
+            '</span> cheered ',
+            ' " data-msgid= "',
+            'Subscriber message incoming—glad to be supporting the stream',
+            'delete-messages',
+            'nick',
+            'amount',
+            'namescolor1',
+            'first',
+            'Test message in a custom chat',
+            'animationOut',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            '<img class= "nolarge " src= "',
+            'Admin',
+            '    </span>    </div>    </div> </div></div>',
+            'VIP user',
+            'displayName',
+            '#1e90ff',
+            'widget-button',
+            'last',
+            '   </span>   </div>   </div> </div></div>',
+            '     </div>     </div> </div> ',
+            'nickColor',
+            'hide',
+            ' times',
+            'cheer-latest',
+            'isCommunityGift',
+            'default',
+            'then',
+            'urls',
+            '2772392enFOuk',
+            'text',
+            '</span> just gifted ',
+            '43285909-412c-4eee-b80d-83452ba53142',
+            ' ">     <div class= "blur">   <div class= "zoom-x">     <div class="sach-animi">   <div class= "acnamebox" style= "color: {namecolor2}; filter: drop-shadow(0 0 1px {namecolor2}) drop-shadow(0 0 50px {namecolor2}) ; -webkit-text-stroke: 0.5px {namebordercolor2}; ">   <img class= "badg_icon1" src= " " style= " left: 10px;">   <div class= "badgescont ">    <div class= "badgesbox " style=";">',
+            '215ikwupP',
+            '.chat-box>div',
+            '.chat-box',
+            'moderator',
+            'addEventListener',
+            'emotes',
+            'type',
+            'onWidgetLoad',
+            '3133686qsjvBY',
+            'msgHideOpt',
+            'broadcaster',
+            '</span> tipped ',
+            ' ">     <div class= "blur">   <div class= "zoom-x">       <div class="sach-animi">  <div class= "acnamebox" style= "color: {namecolor5};filter: drop-shadow(0 0 1px {namecolor5}) drop-shadow(0 0 50px {namecolor5}) ; -webkit-text-stroke: 0.5px {namebordercolor5};  ">   <img class= "badg_icon" src= " " style= " left: 10px;">   <div class= "badgescont ">   <div class= "badgesbox " style="">',
+            'sender',
+            'Here is a followers message for the stream.  \x09\x09\x09\x09\x09\x09\x09',
+            ' <div class= "alertboxs1 gradient-alert2" style= " "> <div class= "alertboxs11 gradient-alert202" style= "color: {msgcolor1};  "> <div class= "alertboxs span2" style= "  "> <div class= "alerttext2 border: none "> ',
+            '100135110',
+            '<svg class= "svgbadge " width= "258.166 " height= "258.166 " viewBox= "0 0 68.306 68.306 " xml:space= "preserve " xmlns= "http://www.w3.org/2000/svg ">   <path style= "fill:#fff;stroke-width:3.293;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:stroke fill markers " d= "M100.243 106.668c-.419 0-.838.158-1.158.476L82.462 123.6l-12.86-11.883c-1.078-.997-2.823-.192-2.764 1.275l1.243 31.403a1.646 1.646 0 0 0 1.646 1.581h60.323c.877 0 1.6-.687 1.644-1.564l1.596-32.113c.074-1.505-1.743-2.31-2.809-1.246l-12.502 12.502-16.578-16.412a1.642 1.642 0 0 0-1.158-.476z " transform= "translate(-65.823 -93.145) "/> </svg>',
+            'firsttime',
+            ' <div class= "alertboxs1 gradient-alert4" style= " "> <div class= "alertboxs11 gradient-alert404" style= "color: {msgcolor1};  "> <div class= "alertboxs span4" style= "  "> <div class= "alerttext4 border: none ">   ',
+            '  </span>  </div>  </div> </div></div>',
+            '<div class= "badges ">',
+            '</span> raided with ',
+            'tip-latest',
+            'partner',
+            'Verified',
+            '49940QEXVqy',
+            'join',
+            'pronoun_id',
+            'not',
+            '43285909-412c-4eee-b80d-89228ba53142',
+            '84%)',
+            'json',
+            'msgLimit',
+            'replace',
+            'toLowerCase',
+            ' " class= "message-row animation1 ',
+            '.badgesbox',
+            'name',
+            'alertssub',
+            '</div></div>    <span class= "name ">   ',
+            'forEach',
+            '.message-row[data-msgid=',
+            '/pronouns',
+            'https://cdn.streamelements.com/uploads/01jyx6pb93c444zj6k3a2fjte1.png',
+            'alertsbits',
+            'sub',
+            '.pronouns',
+            'https://pronouns.alejo.io/api',
+            '  </span>  <span class= "pronouns "></span> <svg class= "acstar" width= "60" height= "60 " viewBox= "0 0 266 240" xml:space= "preserve " xmlns= " http://www.w3.org/2000/svg "> <path style= "fill: {namecolor6};fill-opacity:1;" d="M35.91,129.15l0-18.48c48.78,0,88.32-39.54,88.32-88.32l18.48,0c0,48.78,39.54,88.32,88.32,88.32l0,18.48 c-48.78,0-88.32,39.54-88.32,88.32h-18.48C124.23,168.69,84.69,129.15,35.91,129.15z"/></svg> <svg class= "rectf"style= "filter: drop-shadow(0 0 10px {namecolor6}) drop-shadow(0 0 60px {namecolor6}) ;"> </svg> </div>    <div class= "msgcont ">        <div class= "messagebox" style= "color: {msgcolor3};background-color: #ffffff00;   ">  <svg class= "rectt"style= ""> </svg>  <svg class= "adbox6" width= "60" height= "60 " viewBox= "0 0 266 240" xml:space= "preserve " xmlns= " http://www.w3.org/2000/svg "> <path style= "fill: {boxcolor};fill-opacity:1;" d="M133,210.43c-49.87,0-90.43-40.57-90.43-90.43c0-49.86,40.57-90.42,90.43-90.42 c49.86,0,90.42,40.57,90.42,90.42C223.43,169.86,182.86,210.43,133,210.43z M133,48.73c-39.3,0-71.27,31.97-71.27,71.26 c0,39.3,31.97,71.27,71.27,71.27c39.29,0,71.26-31.97,71.26-71.27C204.27,80.7,172.3,48.73,133,48.73z"/></svg> <span class= "message "style="filter: drop-shadow(0 0 3px {userb}) drop-shadow(0 0 18px {userb}) ;-webkit-text-stroke:0.5px {userb};">  ',
+            '<svg class= "svgbadge " id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve"> <style type="text/css"> .st1{fill:{namecolor4};} </style> <path class="st1" d="M92.41,44.75L52.33,81.74c-2.53,2.33-6.13,2.33-8.66,0L3.59,44.75c-3.12-2.88-3.48-8.19-0.79-11.59l14.25-18.04 c1.31-1.66,3.17-2.61,5.12-2.61h51.65c1.95,0,3.81,0.95,5.12,2.61L93.2,33.16C95.89,36.56,95.52,41.87,92.41,44.75z"/> </svg>',
+            'Moderator',
+            'split',
+            'alertsfollower',
+            '</div></div>     <span class= "name ">    ',
+            '<div data-sender= "',
+            '857756PQNPXo',
+            'user',
+            'msgFont',
+            'username',
+            'url',
+            'alertsraids',
+            '.artist-badge',
+            'alignMessages',
+            '/users/',
+            '    </span>    <span class= "pronouns "></span> <svg class= "acstar" width= "60" height= "60 " viewBox= "0 0 266 240" xml:space= "preserve " xmlns= " http://www.w3.org/2000/svg "> <path style= "fill: {namecolor2};fill-opacity:1;" d="M35.91,129.15l0-18.48c48.78,0,88.32-39.54,88.32-88.32l18.48,0c0,48.78,39.54,88.32,88.32,88.32l0,18.48 c-48.78,0-88.32,39.54-88.32,88.32h-18.48C124.23,168.69,84.69,129.15,35.91,129.15z"/></svg> <svg class= "rectf"style= "filter: drop-shadow(0 0 10px {namecolor2}) drop-shadow(0 0 60px {namecolor2}) ;"> </svg>   </div>    <div class= "msgcont ">        <div class= "messagebox" style= "color: {msgcolor2};background-color: #ffffff00;   "> <svg class= "rectt"style= ""> </svg> <svg class= "adbox2" width= "60" height= "60 " viewBox= "0 0 266 240" xml:space= "preserve " xmlns= " http://www.w3.org/2000/svg "> <path style= "fill: {boxcolor};fill-opacity:1;" d="M178.96,108.27c9.83-9.83,25.92-9.83,35.74,0l0,0c9.83,9.83,9.83,25.92,0,35.74l0,0 c-9.83,9.83-25.91,9.83-35.74,0l0,0C169.14,134.19,169.14,118.1,178.96,108.27z M113.06,42.37c9.83-9.83,25.92-9.83,35.74,0l0,0 c9.83,9.83,9.83,25.92,0,35.74l0,0c-9.83,9.83-25.91,9.83-35.74,0l0,0C103.23,68.29,103.23,52.2,113.06,42.37z M117.19,170.04 c9.83-9.83,25.92-9.83,35.74,0l0,0c9.83,9.83,9.83,25.92,0,35.74l0,0c-9.83,9.83-25.91,9.83-35.74,0l0,0 C107.37,195.96,107.37,179.87,117.19,170.04z M51.29,104.14c9.83-9.83,25.92-9.83,35.74,0l0,0c9.83,9.83,9.83,25.92,0,35.74l0,0 c-9.83,9.83-25.91,9.83-35.74,0l0,0C41.47,130.06,41.47,113.96,51.29,104.14z"/></svg> <video class= "mod_icon" src= "  " autoplay loop muted playsinline> </video>  <video class= "mod_icon2" src= "  " autoplay muted playsinline> </video>  <span class= "message "style="filter: drop-shadow(0 0 3px {modb}) drop-shadow(0 0 18px {modb}) ;-webkit-text-stroke: 0.5px {modb};">     ',
+            '<div class= "message-row-2 blur "> <div class= "zoom-x">    <div class="sach-animi">             ',
+            'html',
+            ' <div class= "blur">    <div class= "zoom-x">      <div class="sach-animi" style=" margin-top: -24px;"> <div class= "acnamebox " style= "top: 40px; color: {namecolor3};filter: drop-shadow(0 0 1px {namecolor3}) drop-shadow(0 0 50px {namecolor3}) ; -webkit-text-stroke: 0.5px {namebordercolor3};">   <img class= "badg_icon" src= " " style= " left: 10px;" > <div class= "badgescont ">   <div class= "badgesbox " style="">',
+            'hsl(',
+            'nameGlow',
+            '.chat-box div:nth-child(-n+{msgLimitAmount})',
+            'slideToggle',
+            '<img class= "large " src= "',
+            'fadeOut',
+            'toFixed',
+            '.message-row[data-sender=',
+            'vip/1',
+            '1EtibhG',
+            ' </span>    <span class= "pronouns "></span> <svg class= "acstar" width= "60" height= "60 " viewBox= "0 0 266 240" xml:space= "preserve " xmlns= " http://www.w3.org/2000/svg "> <path style= "fill: {namecolor4};fill-opacity:1;" d="M35.91,129.15l0-18.48c48.78,0,88.32-39.54,88.32-88.32l18.48,0c0,48.78,39.54,88.32,88.32,88.32l0,18.48 c-48.78,0-88.32,39.54-88.32,88.32h-18.48C124.23,168.69,84.69,129.15,35.91,129.15z"/></svg> <svg class= "rectf"style= "filter: drop-shadow(0 0 10px {namecolor4}) drop-shadow(0 0 60px {namecolor4}) ;"> </svg>   </div>    <div class= "msgcont ">        <div class= "messagebox" style= "color: {msgcolor3};background-color: #ffffff00;border: 0px solid {bordercolor3}; "> <svg class= "rectt"style= ""> </svg>    <svg class="adbox4" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 266 240" style="enable-background:new 0 0 266 240;" xml:space="preserve"> <style type="text/css"> .st202{fill:{diamondcol};} .st101{fill:{diamondcol};filter: brightness(1.6) saturate(3); } </style> <g> <g> <path class="st202" d="M200.99,163.32v0.2c0,0.25-0.05,0.49-0.05,0.74c-0.1,0.3-0.2,0.64-0.34,0.94c-0.05,0.1-0.1,0.2-0.15,0.29 c-0.25,0.39-0.59,0.79-1.03,1.08l-0.15,0.1l-66.17,45.75c-1.43,0.98-3.39,0.98-4.82,0l-66.22-45.8l-0.1-0.05 c-0.34-0.3-0.69-0.64-0.94-0.98c-0.05-0.15-0.15-0.25-0.2-0.39c-0.25-0.54-0.39-1.13-0.39-1.72c0-0.05,0-0.05,0-0.1 c0.05-0.54,0.2-1.08,0.44-1.57c0-0.1,0.1-0.25,0.2-0.34l66.32-127.22c1.23-2.31,4.28-2.61,6-0.89c0.25,0.25,0.44,0.54,0.64,0.89 l66.37,127.32c0.25,0.34,0.44,0.69,0.49,1.08C200.94,162.88,200.99,163.08,200.99,163.32z"/> </g> <path class="st101" d="M206.06,161.68c-0.14-1.21-0.76-2.27-1.15-2.85L138.69,31.8c-0.39-0.69-0.86-1.44-1.58-2.17 c-1.7-1.7-3.98-2.64-6.4-2.64c-3.34,0-6.39,1.83-7.95,4.77L56.47,158.93c-0.1,0.17-0.19,0.35-0.27,0.53l-0.02-0.01 c-0.54,1.07-0.86,2.23-0.97,3.44c-0.01,0.16-0.02,0.41-0.02,0.57c0,1.3,0.3,2.65,0.86,3.89l0,0c0.07,0.16,0.15,0.32,0.23,0.47 c0.13,0.28,0.29,0.55,0.48,0.81c0.47,0.66,1.07,1.3,1.79,1.92c0.24,0.21,0.5,0.39,0.78,0.56l65.97,45.63 c1.59,1.09,3.45,1.67,5.4,1.67c1.95,0,3.81-0.58,5.4-1.67l66.17-45.75c1.09-0.73,1.98-1.65,2.65-2.72c0.08-0.13,0.31-0.56,0.38-0.7 c0.25-0.5,0.44-1.02,0.6-1.52c0.17-0.52,0.31-1.25,0.31-1.8c0.02-0.17,0.05-0.56,0.05-0.74 C206.25,162.58,206.13,161.99,206.06,161.68z M200.94,164.26c0,0.01-0.01,0.02-0.01,0.03c0-0.02,0.01-0.04,0.01-0.06 C200.94,164.24,200.94,164.25,200.94,164.26z M200.99,163.46l-4.72-3.51l-60.7-45.21c-2.91-2.16-6.9-2.16-9.8,0l-60.75,45.21 l-4.57,3.41c0.05-0.54,0.19-1.07,0.44-1.56c0-0.1,0.1-0.24,0.2-0.34l66.32-127.22c0.7-1.32,2.01-1.99,3.32-1.99 c0.97,0,1.95,0.37,2.69,1.1c0.25,0.25,0.44,0.54,0.64,0.88l66.37,127.32c0.25,0.34,0.44,0.69,0.49,1.08 c0.05,0.25,0.1,0.44,0.1,0.69V163.46z"/> </g> </svg>      <img class= "vip_icon1" src= "   " style= " ">  <video class= "vip_icon2" src= "  " autoplay muted playsinline> </video>    <span class= "message "style="filter: drop-shadow(0 0 3px {vipb}) drop-shadow(0 0 18px {vipb}) ;-webkit-text-stroke:0.5px {vipb};">  ',
+            'event',
+            'startsWith',
+            'css',
+            ' "/>',
+            '1060334HVQony',
+            'children',
+            'channel',
+            'subscriber-latest',
+            'userId',
+            'badges',
+            'accentcolor',
+            'now',
+            'createElement',
+            'field',
+            '<style>   @import url(\x27https://fonts.googleapis.com/css2?family=',
+            ' " class= "badge "></div>',
+            'Hi there! Just joined the chat for the first time—excited to be here!',
+            'flex',
+            '.premium',
+            'tags',
+            '43285909-412c-4eee-b80d-89f1482ba53142',
+            'body',
+            'display',
+            'top',
+            'ignoredUsers',
+            'message',
+            'pronouns',
+            '.chat-box div:nth-child(-n+15)',
+            'alertsdonation',
+            '100995110',
+            'max',
+            '</span> just followed',
+            'This is a system-level test message issued by an admin',
+            'first-msg',
+            'onEventReceived',
+            'testMessageMod',
+            '#ff69b4',
+            '#00ff7f'
+        ];
+        _0x261d = function () {
+            return _0x27fa46;
+        };
+        return _0x261d();
+    }
+    const PRONOUNS_API_BASE = _0x212728(0xb), PRONOUNS_API = {
+            'user': _0x41682a => PRONOUNS_API_BASE + _0x212728(0x1b) + _0x41682a,
+            'pronouns': PRONOUNS_API_BASE + _0x212728(0x6)
+        };
+    async function getPronouns() {
+        const _0x397a59 = _0x212728, _0x2267cd = await get(PRONOUNS_API['pronouns']);
+        _0x2267cd && _0x2267cd[_0x397a59(0x4)](_0x3f588b => {
+            const _0x2c7c8a = _0x397a59;
+            pronounsObj[_0x2c7c8a(0x45)][_0x3f588b[_0x2c7c8a(0x1)]] = _0x3f588b[_0x2c7c8a(0x41)];
+        });
+    }
+    function addMessage(_0x3469ea, _0x7e4a20, _0x461214, _0x1c5bc4, _0x240da0, _0x435e34, _0x93615f) {
+        const _0x508b33 = _0x212728;
+        totalMessages += 0x1;
+        switch (_0x93615f) {
+        case _0x508b33(0xb5):
+            element = $['parseHTML'](_0x508b33(0x12) + _0x240da0 + _0x508b33(0x9c) + _0x435e34 + ' " class= "message-row animation1 ' + _0x435e34 + _0x508b33(0x1f) + _0x7e4a20 + _0x508b33(0x3) + _0x3469ea + _0x508b33(0x60) + _0x461214 + _0x508b33(0xae));
+            break;
+        case _0x508b33(0xcf):
+            element = $['parseHTML'](_0x508b33(0x12) + _0x240da0 + _0x508b33(0x9c) + _0x435e34 + _0x508b33(0xe1) + _0x435e34 + ' ">   <div class= "message-row-4 blur">   <div class= "acnamebox" style= "color: {namecolor6}; filter: drop-shadow(0 0 1px {namecolor6}) drop-shadow(0 0 50px {namecolor6}) ; -webkit-text-stroke: 0.5px {namebordercolor6}; ">     <div class= "badgescont ">  <div class= "badgesbox " style="">' + _0x7e4a20 + '</div></div>   <span class= "name ">  ' + _0x3469ea + _0x508b33(0xc) + _0x461214 + _0x508b33(0xd1));
+            break;
+        case _0x508b33(0x62):
+            element = $[_0x508b33(0x57)](_0x508b33(0x12) + _0x240da0 + _0x508b33(0x9c) + _0x435e34 + _0x508b33(0xe1) + _0x435e34 + _0x508b33(0x5b) + _0x7e4a20 + _0x508b33(0x11) + _0x3469ea + _0x508b33(0x2a) + _0x461214 + _0x508b33(0x83));
+            break;
+        case _0x508b33(0x99):
+            element = $['parseHTML'](_0x508b33(0x12) + _0x240da0 + _0x508b33(0x9c) + _0x435e34 + ' " class= "message-row animation1 ' + _0x435e34 + _0x508b33(0xbc) + _0x7e4a20 + _0x508b33(0x11) + _0x3469ea + _0x508b33(0x1c) + _0x461214 + _0x508b33(0x83));
+            break;
+        case _0x508b33(0x9):
+            element = $[_0x508b33(0x57)](_0x508b33(0x12) + _0x240da0 + _0x508b33(0x9c) + _0x435e34 + ' " class= "message-row animation1 ' + _0x435e34 + _0x508b33(0xc9) + _0x7e4a20 + _0x508b33(0x3) + _0x3469ea + '    </span>    <span class= "pronouns "></span> <svg class= "acstar" width= "60" height= "60 " viewBox= "0 0 266 240" xml:space= "preserve " xmlns= " http://www.w3.org/2000/svg "> <path style= "fill: {namecolor5};fill-opacity:1;" d="M35.91,129.15l0-18.48c48.78,0,88.32-39.54,88.32-88.32l18.48,0c0,48.78,39.54,88.32,88.32,88.32l0,18.48 c-48.78,0-88.32,39.54-88.32,88.32h-18.48C124.23,168.69,84.69,129.15,35.91,129.15z"/></svg> <svg class= "rectf"style= "filter: drop-shadow(0 0 10px {namecolor5}) drop-shadow(0 0 60px {namecolor5}) ;"> </svg>  </div>    <div class= "msgcont ">        <div class= "messagebox" style= "color: {msgcolor4};background-color: #ffffff00;   "> <svg class= "rectt"style= ""> </svg>  <svg class= "adbox5" width= "60" height= "60 " viewBox= "0 0 266 240" xml:space= "preserve " xmlns= " http://www.w3.org/2000/svg "> <path style= "fill: {boxcolor};fill-opacity:1;" d="M144.56,71.56v37.29h36.02v24.04h-36.02v37.73h-24.33v-37.73H84.07v-24.04h36.16V71.56H144.56z M133,211.34 c-50.37,0-91.36-40.97-91.36-91.34S82.63,28.66,133,28.66s91.35,40.97,91.35,91.34S183.37,211.34,133,211.34z M133,43.19 c-42.35,0-76.81,34.46-76.81,76.81s34.46,76.81,76.81,76.81c42.35,0,76.8-34.46,76.8-76.81S175.35,43.19,133,43.19z"/></svg>  <video class= "sub_icon1" src= "   " autoplay loop muted playsinline> </video>  <video class= "sub_icon2" src= "  " autoplay muted playsinline> </video>   <span class= "message "style="filter: drop-shadow(0 0 3px {subb}) drop-shadow(0 0 18px {subb}) ;-webkit-text-stroke: 0.5px {subb};">  ' + _0x461214 + _0x508b33(0xae));
+            break;
+        case 'Admin':
+            element = $[_0x508b33(0x57)](_0x508b33(0x12) + _0x240da0 + _0x508b33(0x9c) + _0x435e34 + _0x508b33(0xe1) + _0x435e34 + ' ">   <div class= "blur">   <div class= "zoom-x">       <div class="sach-animi"> <div class= "acnamebox   " style= "color: {namecolor}; background-color: {#ffffff00} ; filter: drop-shadow(0 0 1px {namecolor}) drop-shadow(0 0 50px {namecolor}) ;-webkit-text-stroke: 0.5px {namebordercolor}; ">   <img class= "badg_icon1" src= "      " style= " left: 10px;" >     <div class= "badgescont ">    <div class= "badgesbox " style="">' + _0x7e4a20 + _0x508b33(0x11) + _0x3469ea + _0x508b33(0x8e) + _0x461214 + _0x508b33(0xa8));
+            break;
+        }
+        msgAlign === _0x508b33(0x94) ? ($(element)[_0x508b33(0x5a)](_0x508b33(0xbf)), $('.chat-box>div')[_0x508b33(0xad)]()[_0x508b33(0xb1)]()) : ($(element)[_0x508b33(0x6d)]('.chat-box'), $('.chat-box>div')['first']()[_0x508b33(0xb1)]()), msgHideOpt === !![] && $(_0x508b33(0x59))[_0x508b33(0x8c)](_0x508b33(0xa4)), badgesDisplay === ![] && $(_0x508b33(0x0))[_0x508b33(0x2d)](_0x508b33(0x41), _0x508b33(0x77)), badgesCustom == !![] && ($(_0x508b33(0x86))['html'](_0x508b33(0xd)), $('.moderator')[_0x508b33(0x1e)](_0x508b33(0x92)), $('.broadcaster')['html'](_0x508b33(0x66)), $(_0x508b33(0x3d))['html'](_0x508b33(0xce)), $(_0x508b33(0x19))[_0x508b33(0x1e)](_0x508b33(0x68))), msgAlign === _0x508b33(0x94) ? $('.chat-box>div')[_0x508b33(0xad)]()[_0x508b33(0x23)](0x12c) : $(_0x508b33(0xbe))[_0x508b33(0xa2)]()[_0x508b33(0x23)](0x190), msgLimit === !![] ? totalMessages > msgLimitAmount && (msgAlign === _0x508b33(0x94) ? $(_0x508b33(0xbf))[_0x508b33(0x30)]()[_0x508b33(0xda)](_0x508b33(0x72))[_0x508b33(0x25)](0x1f4, function () {
+            const _0x2946fe = _0x508b33;
+            $(this)[_0x2946fe(0x63)]();
+        }) : $('.chat-box')[_0x508b33(0x30)]()['not']('.chat-box div:nth-child(-n+{msgLimitAmount})')[_0x508b33(0x25)](0x1f4, function () {
+            $(this)['remove']();
+        })) : msgAlign === _0x508b33(0x94) ? $(_0x508b33(0xbf))[_0x508b33(0x30)]()[_0x508b33(0xda)](_0x508b33(0x78))[_0x508b33(0x25)](0x1f4, function () {
+            $(this)['remove']();
+        }) : $(_0x508b33(0xbf))[_0x508b33(0x30)]()[_0x508b33(0xda)](_0x508b33(0x46))[_0x508b33(0x25)](0x1f4, function () {
+            const _0x268a63 = _0x508b33;
+            $(this)[_0x268a63(0x63)]();
+        });
+    }
+    window['addEventListener'](_0x212728(0x4d), function (_0x1cc366) {
+        const _0x8efbcd = _0x212728;
+        if (_0x1cc366[_0x8efbcd(0x90)][_0x8efbcd(0x2b)][_0x8efbcd(0x6c)] === _0x8efbcd(0xac)) {
+            let _0x5abc31;
+            switch (_0x1cc366[_0x8efbcd(0x90)]['event'][_0x8efbcd(0x38)]) {
+            case 'testtestMessage':
+                _0x5abc31 = new CustomEvent(_0x8efbcd(0x4d), testMessage);
+                break;
+            case _0x8efbcd(0x67):
+                _0x5abc31 = new CustomEvent(_0x8efbcd(0x4d), testMessageLong);
+                break;
+            case _0x8efbcd(0x51):
+                _0x5abc31 = new CustomEvent(_0x8efbcd(0x4d), testMessageVip);
+                break;
+            case _0x8efbcd(0x55):
+                _0x5abc31 = new CustomEvent(_0x8efbcd(0x4d), testMessageSub);
+                break;
+            case _0x8efbcd(0x4e):
+                _0x5abc31 = new CustomEvent('onEventReceived', testMessageMod);
+                break;
+            case _0x8efbcd(0x7e):
+                _0x5abc31 = new CustomEvent(_0x8efbcd(0x4d), testMessageFirst);
+                break;
+            }
+            window['dispatchEvent'](_0x5abc31);
+            return;
+        }
+        if (_0x1cc366[_0x8efbcd(0x90)][_0x8efbcd(0x6c)] === _0x8efbcd(0x7f)) {
+            const _0x1e5e88 = _0x1cc366[_0x8efbcd(0x90)][_0x8efbcd(0x2b)][_0x8efbcd(0x6e)];
+            $(_0x8efbcd(0x5) + _0x1e5e88 + ']')[_0x8efbcd(0x63)]();
+            return;
+        } else {
+            if (_0x1cc366['detail']['listener'] === _0x8efbcd(0x9e)) {
+                const _0x2cc896 = _0x1cc366['detail'][_0x8efbcd(0x2b)][_0x8efbcd(0x33)];
+                $(_0x8efbcd(0x27) + _0x2cc896 + ']')[_0x8efbcd(0x63)]();
+                return;
+            }
+        }
+        const _0x254411 = _0x1cc366[_0x8efbcd(0x90)]['listener'];
+        let _0x194d87 = _0x1cc366[_0x8efbcd(0x90)]['event'];
+        if (fieldData[_0x8efbcd(0x52)] === !![]) {
+            if (_0x254411 === _0x8efbcd(0x7a) || _0x254411 === 'subscriber-latest' || _0x254411 === 'raid-latest' || _0x254411 === _0x8efbcd(0xd4) || _0x254411 === 'cheer-latest') {
+                let _0x37f379;
+                switch (_0x254411) {
+                case _0x8efbcd(0x7a):
+                    fieldData[_0x8efbcd(0x10)] && (_0x37f379 = _0x8efbcd(0x5d) + _0x194d87[_0x8efbcd(0x1)] + _0x8efbcd(0x4a));
+                    ;
+                    break;
+                case _0x8efbcd(0x32):
+                    if (fieldData[_0x8efbcd(0x2)]) {
+                        if (_0x194d87['bulkGifted'] == !![])
+                            _0x37f379 = _0x8efbcd(0x5d) + _0x194d87[_0x8efbcd(0xca)] + _0x8efbcd(0xba) + _0x194d87['amount'] + _0x8efbcd(0x56);
+                        else {
+                            if (_0x194d87[_0x8efbcd(0x84)] == !![] && _0x194d87[_0x8efbcd(0xb4)] !== !![])
+                                _0x37f379 = _0x8efbcd(0x5d) + _0x194d87['sender'] + '</span> just gifted a sub';
+                            else {
+                                if (_0x194d87[_0x8efbcd(0x84)] !== !![] && _0x194d87[_0x8efbcd(0xb4)] !== !![] && _0x194d87[_0x8efbcd(0xa0)] > 0x1)
+                                    _0x37f379 = _0x8efbcd(0x5d) + _0x194d87['name'] + _0x8efbcd(0x81) + _0x194d87[_0x8efbcd(0xa0)] + _0x8efbcd(0xb2);
+                                else {
+                                    if (_0x194d87[_0x8efbcd(0x84)] !== !![] && _0x194d87[_0x8efbcd(0xb4)] !== !![])
+                                        _0x37f379 = _0x8efbcd(0x5d) + _0x194d87[_0x8efbcd(0x1)] + '</span> just subscribed';
+                                    else
+                                        return;
+                                }
+                            }
+                        }
+                    }
+                    break;
+                case _0x8efbcd(0xd4):
+                    fieldData[_0x8efbcd(0x47)] && (_0x37f379 = '<span>' + _0x194d87[_0x8efbcd(0x1)] + _0x8efbcd(0xc8) + currency + _0x194d87[_0x8efbcd(0xa0)][_0x8efbcd(0x26)](0x0));
+                    break;
+                case 'cheer-latest':
+                    fieldData[_0x8efbcd(0x8)] && (_0x37f379 = _0x8efbcd(0x5d) + _0x194d87[_0x8efbcd(0x1)] + _0x8efbcd(0x9b) + _0x194d87[_0x8efbcd(0xa0)] + ' bits');
+                    ;
+                    break;
+                case _0x8efbcd(0x6b):
+                    fieldData[_0x8efbcd(0x18)] && (_0x37f379 = '<span>' + _0x194d87['name'] + _0x8efbcd(0xd3) + _0x194d87[_0x8efbcd(0xa0)]);
+                    ;
+                    break;
+                }
+                if (!_0x37f379)
+                    return;
+                let _0x15be93;
+                switch (_0x254411) {
+                case _0x8efbcd(0x7a):
+                    _0x15be93 = _0x8efbcd(0x58);
+                    break;
+                case _0x8efbcd(0x32):
+                    _0x15be93 = _0x8efbcd(0xcc);
+                    break;
+                case _0x8efbcd(0xd4):
+                    _0x15be93 = ' <div class= "alertboxs1 gradient-alert3" style= " "> <div class= "alertboxs11 gradient-alert303" style= "color: {msgcolor1};  "> <div class= "alertboxs span3" style= "color: {msgcolorevents204} "> <div class= "alerttext3 border: none "> ';
+                    break;
+                case _0x8efbcd(0xb3):
+                    _0x15be93 = _0x8efbcd(0xd0);
+                    break;
+                case _0x8efbcd(0x6b):
+                    _0x15be93 = ' <div class= "alertboxs1 gradient-alert5" style= " "> <div class= "alertboxs11 gradient-alert505" style= "color: {msgcolor1};  "> <div class= "alertboxs span5" style= "  "> <div class= "alerttext5 border: none "> ';
+                    break;
+                }
+                if (!_0x15be93)
+                    return;
+                const _0xb54f2a = $[_0x8efbcd(0x57)](_0x8efbcd(0x1d) + _0x15be93 + '     ' + _0x37f379 + _0x8efbcd(0xaf));
+                totalMessages += 0x1;
+                if (msgAlign === _0x8efbcd(0x94)) {
+                    $(_0xb54f2a)[_0x8efbcd(0x5a)](_0x8efbcd(0xbf)), $(_0x8efbcd(0xbe))[_0x8efbcd(0xad)]()[_0x8efbcd(0xb1)]()[_0x8efbcd(0x23)](0x12c);
+                    ;
+                } else {
+                    $(_0xb54f2a)[_0x8efbcd(0x6d)](_0x8efbcd(0xbf)), $(_0x8efbcd(0xbe))['first']()[_0x8efbcd(0xb1)]()['slideToggle'](0x12c);
+                    ;
+                }
+                msgHideOpt === !![] && $(_0x8efbcd(0x59))[_0x8efbcd(0x8c)](_0x8efbcd(0xa4)), msgLimit === !![] && (totalMessages > msgLimitAmount && (msgAlign === _0x8efbcd(0x94) ? $('.chat-box')[_0x8efbcd(0x30)]()['not']('.chat-box div:nth-last-child(-n+{msgLimitAmount})')[_0x8efbcd(0x25)](0x1f4, function () {
+                    const _0x2b687e = _0x8efbcd;
+                    $(this)[_0x2b687e(0x63)]();
+                }) : $(_0x8efbcd(0xbf))[_0x8efbcd(0x30)]()[_0x8efbcd(0xda)](_0x8efbcd(0x22))[_0x8efbcd(0x25)](0x1f4, function () {
+                    const _0x49f022 = _0x8efbcd;
+                    $(this)[_0x49f022(0x63)]();
+                })));
+            }
+        }
+        if (_0x1cc366[_0x8efbcd(0x90)]['listener'] !== _0x8efbcd(0x44))
+            return;
+        let _0x5770d0 = _0x1cc366[_0x8efbcd(0x90)][_0x8efbcd(0x2b)][_0x8efbcd(0x54)];
+        if (_0x5770d0[_0x8efbcd(0xb9)][_0x8efbcd(0x2c)]('!') && hideCommands === 'yes')
+            return;
+        if (ignoredUsers[_0x8efbcd(0x91)](_0x5770d0[_0x8efbcd(0x9f)]) !== -0x1)
+            return;
+        let _0x70721f = _0x1cc366[_0x8efbcd(0x90)]['event'][_0x8efbcd(0x54)][_0x8efbcd(0x3e)];
+        userType = _0x8efbcd(0xb5);
+        _0x70721f['subscriber'] === '1' && (userType = _0x8efbcd(0x9));
+        ;
+        _0x70721f[_0x8efbcd(0x99)] === '1' && (userType = _0x8efbcd(0x99));
+        ;
+        _0x70721f[_0x8efbcd(0x62)] === '1' && (userType = 'vip');
+        ;
+        _0x70721f[_0x8efbcd(0x4c)] == '1' && (userType = _0x8efbcd(0xcf));
+        ;
+        let _0x21ceaf = msgDiv(_0x5770d0), _0x5ecc49 = '', _0x5751ea;
+        for (let _0x85f427 = 0x0; _0x85f427 < _0x5770d0[_0x8efbcd(0x34)]['length']; _0x85f427++) {
+            _0x5751ea = _0x5770d0['badges'][_0x85f427], _0x5751ea[_0x8efbcd(0xc3)] === _0x8efbcd(0xc7) && (userType = _0x8efbcd(0xa7)), _0x5ecc49 += '<div class= "' + _0x5751ea['type'] + ' custombadge "><img alt= " " src= "' + _0x5751ea[_0x8efbcd(0x17)] + _0x8efbcd(0x3a);
+        }
+        _0x5ecc49 = _0x8efbcd(0xd2) + _0x5ecc49 + '</div>';
+        let _0x5bd80b = _0x5770d0[_0x8efbcd(0xaa)], _0x4bc469 = '<span class= "pronouns "></span>';
+        _0x5bd80b = '' + _0x5bd80b, addMessage(_0x5bd80b, _0x5ecc49, _0x21ceaf, _0x5770d0[_0x8efbcd(0x69)], _0x5770d0[_0x8efbcd(0x33)], _0x5770d0[_0x8efbcd(0x6e)], userType);
+        let _0xe4951f = $('.' + _0x5770d0['msgId']);
+        _0x5770d0['tags'][_0x8efbcd(0x34)] === '' && $(_0xe4951f)['find']('.badgesbox')[_0x8efbcd(0x2d)](_0x8efbcd(0x41), _0x8efbcd(0x77));
+        let _0x82b6d3 = '', _0x386cee;
+        if (pronounsOn) {
+            async function _0x469e14() {
+                const _0x46a336 = _0x8efbcd;
+                _0x82b6d3 = await getUserPronoun(_0x5770d0[_0x46a336(0xaa)]), _0x82b6d3 && (_0x386cee = '', $(_0xe4951f)['find'](_0x46a336(0xa))[_0x46a336(0xb9)](_0x82b6d3 + ' ')[_0x46a336(0x8c)](_0x46a336(0x7c)));
+            }
+            _0x469e14();
+        }
+    }), window[_0x212728(0xc1)](_0x212728(0xc4), async _0x4b4505 => {
+        const _0x578475 = _0x212728;
+        fieldData = _0x4b4505[_0x578475(0x90)][_0x578475(0x96)], currency = _0x4b4505[_0x578475(0x90)][_0x578475(0x82)]['symbol'], nickColor = fieldData[_0x578475(0xb0)], nameColor = fieldData[_0x578475(0xa1)], hideCommands = fieldData['hideCommands'], channelName = _0x4b4505[_0x578475(0x90)][_0x578475(0x31)][_0x578475(0x16)], msgAlign = fieldData[_0x578475(0x1a)], msgHideOpt = fieldData[_0x578475(0xc6)], badgesCustom = fieldData['badgesCustom'], largeEmotes = fieldData['largeEmotes'], badgesDisplay = fieldData[_0x578475(0x61)], msgLimit = fieldData[_0x578475(0xde)], msgLimitAmount = +fieldData[_0x578475(0x85)], pronounsOn = fieldData[_0x578475(0x7d)];
+        let _0x1e8c56 = fieldData[_0x578475(0x15)], _0x1dfb04 = fieldData['namesFont'];
+        _0x1e8c56 = _0x1e8c56[_0x578475(0xf)](' ')[_0x578475(0xd8)]('+'), _0x1dfb04 = _0x1dfb04[_0x578475(0xf)](' ')[_0x578475(0xd8)]('+');
+        let _0x976a85 = document[_0x578475(0x37)]('style'), _0x2ac694 = document['createElement'](_0x578475(0x5c));
+        $(_0x976a85)['html'](_0x578475(0x39) + _0x1e8c56 + ':wght@400;500;600;700&display=swap\x27); </style>'), $(_0x2ac694)[_0x578475(0x1e)]('<style>   @import url(\x27https://fonts.googleapis.com/css2?family=' + _0x1dfb04 + _0x578475(0x8b)), $(_0x976a85)[_0x578475(0x6d)]($(_0x578475(0x40))), $(_0x2ac694)[_0x578475(0x6d)]($(_0x578475(0x40)));
+        msgAlign === _0x578475(0x94) && $('.chat-box')[_0x578475(0x2d)]('display', _0x578475(0x3c));
+        msgAlign === _0x578475(0x42) && $(_0x578475(0xbf))['css'](_0x578475(0x41), _0x578475(0x65));
+        lightercolor = getTwitchPastelColor(fieldData[_0x578475(0x35)]), darkcolor = getDark(fieldData[_0x578475(0x35)]), darkcolor2 = getDark2(fieldData[_0x578475(0x35)]), msgGlow = fieldData[_0x578475(0x93)], nameGlow = fieldData[_0x578475(0x21)], outline = fieldData[_0x578475(0x88)], ignoredUsers = fieldData[_0x578475(0x43)][_0x578475(0xe0)]()[_0x578475(0xdf)](' ', '')[_0x578475(0xf)](',');
+        pronounsOn && await getPronouns();
+        ;
+    });
+    function msgDiv(_0x5a08a0) {
+        const _0x8bef9 = _0x212728;
+        let _0x5c5c57 = html_encode(_0x5a08a0['text']), _0x508bfb = _0x5a08a0['emotes'], _0x146c56 = _0x5c5c57;
+        for (let _0x2675d1 = 0x0; _0x2675d1 < _0x508bfb[_0x8bef9(0x70)]; _0x2675d1++) {
+            _0x146c56 = _0x146c56['replace'](_0x508bfb[_0x2675d1][_0x8bef9(0x1)], ' '), _0x146c56 = _0x146c56[_0x8bef9(0xdf)](/\p{C}/gu, '');
+        }
+        return _0x5c5c57[_0x8bef9(0xdf)](/([^\s]*)/gi, function (_0x31649a, _0x2df931) {
+            const _0x5d803f = _0x8bef9;
+            let _0x814817 = _0x508bfb['filter'](_0x340786 => {
+                    const _0x536666 = _0x1c3c;
+                    return html_encode(_0x340786[_0x536666(0x1)]) === _0x2df931;
+                }), _0x335867 = 0x0;
+            if (typeof _0x814817[0x0] !== 'undefined') {
+                let _0x2ec321;
+                _0x335867 = _0x5a08a0[_0x5d803f(0xc2)][_0x5d803f(0x70)];
+                if (_0x146c56['trim']() === '' && largeEmotes === 'on') {
+                    if (_0x335867 === 0x1) {
+                        let _0x26224d = _0x814817[0x0]['urls'][0x4];
+                        _0x26224d[_0x5d803f(0x95)](/cdn.frankerfacez.com/ !== -0x1) && (_0x26224d = _0x26224d[_0x5d803f(0xdf)](_0x5d803f(0x73), _0x5d803f(0x5e))), _0x2ec321 = _0x5d803f(0x24) + _0x26224d + _0x5d803f(0x2e);
+                    } else {
+                        if (_0x335867 > 0x1) {
+                            let _0x6e8f49 = _0x814817[0x0]['urls'][0x2];
+                            _0x6e8f49[_0x5d803f(0x95)](/cdn.frankerfacez.com/ !== -0x1) && (_0x6e8f49 = _0x6e8f49[_0x5d803f(0xdf)](_0x5d803f(0x73), _0x5d803f(0x5e))), _0x2ec321 = _0x5d803f(0x98) + _0x6e8f49 + ' "/>';
+                        }
+                    }
+                } else {
+                    let _0x28d995 = _0x814817[0x0][_0x5d803f(0xb7)][0x1];
+                    _0x28d995[_0x5d803f(0x95)](/cdn.frankerfacez.com/ !== -0x1) && (_0x28d995 = _0x28d995[_0x5d803f(0xdf)]('https:https:', _0x5d803f(0x5e))), _0x2ec321 = _0x5d803f(0xa6) + _0x28d995 + _0x5d803f(0x2e);
+                }
+                return _0x2ec321;
+            } else
+                return _0x2df931;
+        });
+    }
+    function html_encode(_0x3dae76) {
+        const _0x3b2285 = _0x212728;
+        return _0x3dae76[_0x3b2285(0xdf)](/[<>"^]/g, function (_0x1acf56) {
+            return '&#' + _0x1acf56['charCodeAt'](0x0) + ';';
+        });
+    }
+    function getColor() {
+        const _0xd4d269 = _0x212728;
+        return _0xd4d269(0x20) + 0x168 * Math['random']() + ',' + _0xd4d269(0x89) + _0xd4d269(0x97);
+    }
+    function getPastelColor() {
+        const _0x68241d = _0x212728;
+        return 'hsl(' + 0x168 * Math[_0x68241d(0x80)]() + ',' + _0x68241d(0x89) + _0x68241d(0xdc);
+    }
+    function getDark(_0x265d70) {
+        const _0x133520 = _0x212728;
+        let _0x4a492a = 0x0, _0x212f1f = 0x0, _0x4cc10e = 0x0;
+        if (_0x265d70['length'] == 0x4)
+            _0x4a492a = '0x' + _0x265d70[0x1] + _0x265d70[0x1], _0x212f1f = '0x' + _0x265d70[0x2] + _0x265d70[0x2], _0x4cc10e = '0x' + _0x265d70[0x3] + _0x265d70[0x3];
+        else
+            _0x265d70[_0x133520(0x70)] == 0x7 && (_0x4a492a = '0x' + _0x265d70[0x1] + _0x265d70[0x2], _0x212f1f = '0x' + _0x265d70[0x3] + _0x265d70[0x4], _0x4cc10e = '0x' + _0x265d70[0x5] + _0x265d70[0x6]);
+        _0x4a492a /= 0xff, _0x212f1f /= 0xff, _0x4cc10e /= 0xff;
+        let _0x52c2a8 = Math[_0x133520(0x71)](_0x4a492a, _0x212f1f, _0x4cc10e), _0x331492 = Math[_0x133520(0x49)](_0x4a492a, _0x212f1f, _0x4cc10e), _0x566407 = _0x331492 - _0x52c2a8, _0xbaba7f = 0x0, _0x16b88b = 0x0, _0x32a308 = 0x0;
+        if (_0x566407 == 0x0)
+            _0xbaba7f = 0x0;
+        else {
+            if (_0x331492 == _0x4a492a)
+                _0xbaba7f = (_0x212f1f - _0x4cc10e) / _0x566407 % 0x6;
+            else {
+                if (_0x331492 == _0x212f1f)
+                    _0xbaba7f = (_0x4cc10e - _0x4a492a) / _0x566407 + 0x2;
+                else
+                    _0xbaba7f = (_0x4a492a - _0x212f1f) / _0x566407 + 0x4;
+            }
+        }
+        _0xbaba7f = Math[_0x133520(0x6a)](_0xbaba7f * 0x3c);
+        if (_0xbaba7f < 0x0)
+            _0xbaba7f += 0x168;
+        return _0x32a308 = (_0x331492 + _0x52c2a8) / 0x2, _0x16b88b = _0x566407 == 0x0 ? 0x0 : _0x566407 / (0x1 - Math[_0x133520(0x74)](0x2 * _0x32a308 - 0x1)), _0x16b88b = +(_0x16b88b * 0x64)[_0x133520(0x26)](0x1), _0x32a308 = +(_0x32a308 * 0x64)[_0x133520(0x26)](0x1), _0x32a308 = _0x32a308 - 0x8, _0xbaba7f = _0xbaba7f - 0x6, _0x133520(0x20) + _0xbaba7f + ',' + _0x16b88b + '%,' + _0x32a308 + '%)';
+    }
+    function getDark2(_0x529131) {
+        const _0xcb92f4 = _0x212728;
+        let _0x4a4714 = 0x0, _0x2372b5 = 0x0, _0x1b5624 = 0x0;
+        if (_0x529131[_0xcb92f4(0x70)] == 0x4)
+            _0x4a4714 = '0x' + _0x529131[0x1] + _0x529131[0x1], _0x2372b5 = '0x' + _0x529131[0x2] + _0x529131[0x2], _0x1b5624 = '0x' + _0x529131[0x3] + _0x529131[0x3];
+        else
+            _0x529131[_0xcb92f4(0x70)] == 0x7 && (_0x4a4714 = '0x' + _0x529131[0x1] + _0x529131[0x2], _0x2372b5 = '0x' + _0x529131[0x3] + _0x529131[0x4], _0x1b5624 = '0x' + _0x529131[0x5] + _0x529131[0x6]);
+        _0x4a4714 /= 0xff, _0x2372b5 /= 0xff, _0x1b5624 /= 0xff;
+        let _0x4b7963 = Math[_0xcb92f4(0x71)](_0x4a4714, _0x2372b5, _0x1b5624), _0x5f27ce = Math[_0xcb92f4(0x49)](_0x4a4714, _0x2372b5, _0x1b5624), _0x42e231 = _0x5f27ce - _0x4b7963, _0x1153e5 = 0x0, _0x3cec76 = 0x0, _0x5e1237 = 0x0;
+        if (_0x42e231 == 0x0)
+            _0x1153e5 = 0x0;
+        else {
+            if (_0x5f27ce == _0x4a4714)
+                _0x1153e5 = (_0x2372b5 - _0x1b5624) / _0x42e231 % 0x6;
+            else {
+                if (_0x5f27ce == _0x2372b5)
+                    _0x1153e5 = (_0x1b5624 - _0x4a4714) / _0x42e231 + 0x2;
+                else
+                    _0x1153e5 = (_0x4a4714 - _0x2372b5) / _0x42e231 + 0x4;
+            }
+        }
+        _0x1153e5 = Math[_0xcb92f4(0x6a)](_0x1153e5 * 0x3c);
+        if (_0x1153e5 < 0x0)
+            _0x1153e5 += 0x168;
+        return _0x5e1237 = (_0x5f27ce + _0x4b7963) / 0x2, _0x3cec76 = _0x42e231 == 0x0 ? 0x0 : _0x42e231 / (0x1 - Math[_0xcb92f4(0x74)](0x2 * _0x5e1237 - 0x1)), _0x3cec76 = +(_0x3cec76 * 0x64)['toFixed'](0x1), _0x5e1237 = +(_0x5e1237 * 0x64)[_0xcb92f4(0x26)](0x1), _0x5e1237 = _0x5e1237 - 0xe, _0x1153e5 = _0x1153e5 - 0x6, _0xcb92f4(0x20) + _0x1153e5 + ',' + _0x3cec76 + '%,' + _0x5e1237 + '%)';
+    }
+    function getTwitchPastelColor(_0x5a78a9) {
+        const _0x39717d = _0x212728;
+        let _0x4e3dc9 = 0x0, _0x4cb84e = 0x0, _0x245cf7 = 0x0;
+        if (_0x5a78a9[_0x39717d(0x70)] == 0x4)
+            _0x4e3dc9 = '0x' + _0x5a78a9[0x1] + _0x5a78a9[0x1], _0x4cb84e = '0x' + _0x5a78a9[0x2] + _0x5a78a9[0x2], _0x245cf7 = '0x' + _0x5a78a9[0x3] + _0x5a78a9[0x3];
+        else
+            _0x5a78a9['length'] == 0x7 && (_0x4e3dc9 = '0x' + _0x5a78a9[0x1] + _0x5a78a9[0x2], _0x4cb84e = '0x' + _0x5a78a9[0x3] + _0x5a78a9[0x4], _0x245cf7 = '0x' + _0x5a78a9[0x5] + _0x5a78a9[0x6]);
+        _0x4e3dc9 /= 0xff, _0x4cb84e /= 0xff, _0x245cf7 /= 0xff;
+        let _0x897a11 = Math[_0x39717d(0x71)](_0x4e3dc9, _0x4cb84e, _0x245cf7), _0x2733d5 = Math[_0x39717d(0x49)](_0x4e3dc9, _0x4cb84e, _0x245cf7), _0x405b63 = _0x2733d5 - _0x897a11, _0x4bbd8a = 0x0, _0x4b311e = 0x0, _0x1c2cdb = 0x0;
+        if (_0x405b63 == 0x0)
+            _0x4bbd8a = 0x0;
+        else {
+            if (_0x2733d5 == _0x4e3dc9)
+                _0x4bbd8a = (_0x4cb84e - _0x245cf7) / _0x405b63 % 0x6;
+            else {
+                if (_0x2733d5 == _0x4cb84e)
+                    _0x4bbd8a = (_0x245cf7 - _0x4e3dc9) / _0x405b63 + 0x2;
+                else
+                    _0x4bbd8a = (_0x4e3dc9 - _0x4cb84e) / _0x405b63 + 0x4;
+            }
+        }
+        _0x4bbd8a = Math[_0x39717d(0x6a)](_0x4bbd8a * 0x3c);
+        if (_0x4bbd8a < 0x0)
+            _0x4bbd8a += 0x168;
+        return _0x1c2cdb = (_0x2733d5 + _0x897a11) / 0x2, _0x4b311e = _0x405b63 == 0x0 ? 0x0 : _0x405b63 / (0x1 - Math[_0x39717d(0x74)](0x2 * _0x1c2cdb - 0x1)), _0x4b311e = +(_0x4b311e * 0x64)[_0x39717d(0x26)](0x1), _0x1c2cdb = +(_0x1c2cdb * 0x64)[_0x39717d(0x26)](0x1), _0x1c2cdb = _0x1c2cdb + 0x5, _0x39717d(0x20) + _0x4bbd8a + ',' + _0x4b311e + '%,' + _0x1c2cdb + '%)';
+    }
+    let testMessage = {
+            'detail': {
+                'listener': _0x212728(0x44),
+                'event': {
+                    'data': {
+                        'tags': {
+                            'badges': 'moderator/1,partner/1',
+                            'color': _0x212728(0xab),
+                            'mod': '1',
+                            'subscriber': '1',
+                            'user-id': _0x212728(0xcd),
+                            'user-type': 'mod'
+                        },
+                        'userId': '100135110',
+                        'displayName': 'Admin',
+                        'displayColor': _0x212728(0x9a),
+                        'badges': [{
+                                'type': _0x212728(0xc7),
+                                'version': '1',
+                                'url': 'https://static-cdn.jtvnw.net/badges/v1/5527c58c-fb7d-422d-b71b-f309dcb85cc1/3'
+                            }],
+                        'text': _0x212728(0x4b),
+                        'emotes': [],
+                        'msgId': _0x212728(0x53)
+                    },
+                    'renderedText': 'Test message in a custom chat'
+                }
+            }
+        }, testMessageLong = {
+            'detail': {
+                'listener': _0x212728(0x44),
+                'event': {
+                    'data': {
+                        'tags': {
+                            'badges': '',
+                            'color': '#8a2be2',
+                            'mod': '0',
+                            'subscriber': '0',
+                            'user-id': '100135110',
+                            'user-type': 'mod'
+                        },
+                        'userId': _0x212728(0xcd),
+                        'displayName': _0x212728(0x64),
+                        'displayColor': '#8a2be2',
+                        'badges': [],
+                        'text': _0x212728(0xcb),
+                        'emotes': [],
+                        'msgId': _0x212728(0xbb)
+                    },
+                    'renderedText': _0x212728(0xa3)
+                }
+            }
+        }, testMessageSub = {
+            'detail': {
+                'listener': 'message',
+                'event': {
+                    'data': {
+                        'tags': {
+                            'badges': 'subscriber/1',
+                            'color': _0x212728(0x4f),
+                            'vip': '0',
+                            'subscriber': '1',
+                            'user-id': _0x212728(0xcd),
+                            'user-type': 'subscriber'
+                        },
+                        'userId': _0x212728(0xcd),
+                        'displayName': _0x212728(0x87),
+                        'displayColor': '#ff69b4',
+                        'badges': [{
+                                'type': _0x212728(0xd5),
+                                'version': '1',
+                                'url': _0x212728(0x7),
+                                'description': _0x212728(0xd6)
+                            }],
+                        'text': _0x212728(0x9d),
+                        'emotes': [],
+                        'msgId': _0x212728(0x3f)
+                    },
+                    'renderedText': _0x212728(0xa3)
+                }
+            }
+        }, testMessageVip = {
+            'detail': {
+                'listener': _0x212728(0x44),
+                'event': {
+                    'data': {
+                        'tags': {
+                            'badges': _0x212728(0x28),
+                            'color': '#ff69b4',
+                            'vip': '1',
+                            'subscriber': '1',
+                            'user-id': _0x212728(0xcd),
+                            'user-type': 'vip'
+                        },
+                        'userId': '100135110',
+                        'displayName': _0x212728(0xa9),
+                        'displayColor': _0x212728(0x4f),
+                        'badges': [{
+                                'type': _0x212728(0x62),
+                                'version': '1',
+                                'url': _0x212728(0x75)
+                            }],
+                        'text': _0x212728(0x8f),
+                        'emotes': [],
+                        'msgId': _0x212728(0x3f)
+                    },
+                    'renderedText': 'Test message in a custom chat'
+                }
+            }
+        }, testMessageMod = {
+            'detail': {
+                'listener': _0x212728(0x44),
+                'event': {
+                    'data': {
+                        'tags': {
+                            'badges': _0x212728(0x79),
+                            'color': '#00ff7f',
+                            'mod': '1',
+                            'subscriber': '1',
+                            'user-id': '100135110',
+                            'user-type': _0x212728(0x99)
+                        },
+                        'userId': '100135110',
+                        'displayName': 'Moderator',
+                        'displayColor': _0x212728(0x50),
+                        'badges': [{
+                                'type': _0x212728(0xc0),
+                                'version': '1',
+                                'url': 'https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/3',
+                                'description': _0x212728(0xe)
+                            }],
+                        'text': 'Monitoring chat activity—everything looks good!',
+                        'emotes': [],
+                        'msgId': _0x212728(0xdb)
+                    },
+                    'renderedText': _0x212728(0xa3)
+                }
+            }
+        }, testMessageFirst = {
+            'detail': {
+                'listener': 'message',
+                'event': {
+                    'data': {
+                        'tags': {
+                            'badges': '',
+                            'color': _0x212728(0x76),
+                            'first-msg': '1',
+                            'userId': '100998110'
+                        },
+                        'userId': _0x212728(0x48),
+                        'displayName': _0x212728(0x87),
+                        'displayColor': '#b22222',
+                        'badges': [],
+                        'text': _0x212728(0x3b),
+                        'emotes': [],
+                        'msgId': _0x212728(0x5f)
+                    },
+                    'renderedText': _0x212728(0xa5)
+                }
+            }
+        };
+    async function get(_0x8b4e47) {
+        const _0x23b342 = _0x212728;
+        return await fetch(_0x8b4e47)[_0x23b342(0xb6)](async _0x5e5ad5 => {
+            const _0x181b35 = _0x23b342;
+            if (!_0x5e5ad5['ok'])
+                return null;
+            return _0x5e5ad5[_0x181b35(0xdd)]();
+        })['catch'](_0x490f9e => null);
+    }
+    async function getUserPronoun(_0x491071) {
+        const _0x144ee5 = _0x212728, _0x5f0a60 = _0x491071['toLowerCase']();
+        let _0x2850d9 = pronounsCache[_0x5f0a60];
+        if (!_0x2850d9 || _0x2850d9['expire'] < Date[_0x144ee5(0x36)]()) {
+            const _0x2eb4bc = await get(PRONOUNS_API[_0x144ee5(0x14)](_0x5f0a60)), [_0x54f375] = _0x2eb4bc;
+            pronounsCache[_0x5f0a60] = {
+                ..._0x54f375,
+                'expire': Date[_0x144ee5(0x36)]() + 0x3e8 * 0x3c * 0x5
+            }, _0x2850d9 = pronounsCache[_0x5f0a60];
+        }
+        if (!_0x2850d9[_0x144ee5(0xd9)])
+            return null;
+        return pronounsObj[_0x144ee5(0x45)][_0x2850d9[_0x144ee5(0xd9)]];
+    }

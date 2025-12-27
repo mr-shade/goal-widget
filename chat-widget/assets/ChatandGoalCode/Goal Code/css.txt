@@ -1,0 +1,336 @@
+.vert .flycont, .vertleft .flycont {
+   flex-shrink: 0;
+   flex-grow: 0;
+   width: 22px;
+   height: fit-content;
+  position: absolute;
+  top: -32px;
+  left: -4px;
+
+}
+
+.hor .flycont {
+   flex-shrink: 0;
+   flex-grow: 0;
+   width: 22px;
+   height: fit-content;
+  position: absolute;
+  right: -30px;
+  top: -4px;
+}
+
+.goalwrap {
+  position: relative;
+  height: fit-content;
+  top: 100px;
+  left: 50px;
+}
+
+.vert, .vertleft {
+ height: calc(100% - 250px);
+ width: fit-content;
+ left: 200px;
+}
+
+.kzoop {
+  width: 24px;
+  height: auto;
+}
+
+.hor .leaf1 {
+  position: absolute;
+  right: 30%;
+  top: -14px;
+}
+.hor .leaf3 {
+    position: absolute;
+    left: 40%;
+    transform: translateX(-60%);
+    top: -210px;
+    zoom: 20%;
+    z-index: -1;
+       filter: hue-rotate({huedg}deg);
+}
+.hor .butterfly {
+    position: absolute;
+    right: -9%;
+    transform: translateX(0%);
+    top: -210px;
+    zoom: 20%;
+    z-index: 1;
+}
+
+.hor .leaf4 {
+    position: absolute;
+    right: 10%;
+    transform: translateX(90%);
+    top: -210px;
+    zoom: 20%;
+    z-index: -1;
+       filter: hue-rotate({huedg}deg);
+}
+.hor .leaf5 {
+    position: absolute;
+    left: 20%;
+    transform: translateX(-80%) rotateX(180deg);
+    bottom: -210px;
+    zoom: 20%;
+    z-index: -1;
+       filter: hue-rotate({huedg}deg);
+}
+.hor .leaf6 {
+    position: absolute;
+    right: 35%;
+    transform: translateX(65%) rotateX(180deg);
+    bottom: -210px;
+    zoom: 20%;
+    z-index: -1;
+       filter: hue-rotate({huedg}deg);
+}
+
+.hor .leaf2 {
+  position: absolute;
+  right: 15%;
+  bottom: -14px;
+}
+
+.vert .leaf1, .vertleft .leaf1  {
+  position: absolute;
+  top: 30%;
+  left: -19px;
+  transform: rotate(-90deg);
+}
+
+.vert .leaf2, .vertleft .leaf2 {
+  position: absolute;
+  top: 15%;
+  right: -19px;
+  transform: rotate(-90deg);
+}
+
+
+
+.hor .container {
+  height: 15px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.vert .container, .vertleft .container {
+  height: 100%;
+  width: 15px;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 40px;
+}
+
+.prog {
+ left: 0;
+ top: 0;
+ /*background: {fillcolor};
+ border-radius: 35px;*/
+ height: 100%;
+ width: 100%;
+ transition: 0.5s;
+ position: relative;
+ flex-shrink: 0;
+}
+
+
+.progline {
+  background: linear-gradient(90deg, {fillcolor}, {fillcolor2}, {fillcolor3}, {fillcolor4}, {fillcolor5}, {fillcolor6});
+ border-radius: 35px;
+ height: 100%;
+ width: calc(100% - 0px);
+}
+
+.rest {
+ right: 0;
+ top: 0;
+ background: {restcolor};
+ border-radius: 35px;
+ height: 100%;
+ width: 100%;
+ transition: 0.5s;
+}
+
+.hor .cont {
+  width: calc(95% - 100px);
+  height: 15px;
+  top: 0px;
+  left: 0px;
+  position: relative;
+  padding: 10px 12px 10px 10px;
+  border-radius: 150px;
+  
+  outline: 2px solid {border1};
+  animation: pulseGlow 5s infinite ease-in-out;
+  outline-offset: -2px;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px {neoncol1},
+                0 0 20px {neoncol2},
+                0 0 30px {neoncol3};
+  }
+  50% {
+    box-shadow: 0 0 25px {neoncol4},
+                0 0 50px {neoncol5},
+                0 0 75px {neoncol6};
+  }
+  100% {
+    box-shadow: 0 0 10px {neoncol1},
+                0 0 20px {neoncol2},
+                0 0 30px {neoncol3};
+  }
+}
+
+.vert .cont, .vertleft .cont {
+  width: 15px;
+  height: calc(100% - 20px);
+  top: 0px;
+  left: 0px;
+  position: relative;
+  padding: 12px 10px 10px 10px;
+  border-radius: 150px;
+  background: linear-gradient(0deg, {bg1}, {bg2});
+  outline: 2px solid {border1};
+  outline-offset: 5px;
+}
+
+.text {
+  font-size: {fontSize}px;
+  position: absolute;
+  z-index: 8;
+  background: {fontColor};
+  padding: 4px 20px;
+  border-radius: 50px;
+  line-height: 1em;
+  transition: 0.5s;
+}
+.hor .text {
+  transform: translate(-50%, 100%);
+  left: 50%;
+  bottom: -15px;
+}
+
+.vert .text {
+  transform: translate(100%, -50%);
+  right: -25px;
+  top: 50%;
+}
+
+.vertleft .text {
+  transform: translate(-100%, -50%);
+  left: -25px;
+  top: 50%;
+}
+
+.hor .dot {
+  bottom: 6px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  width: 6px;
+  height: auto;
+}
+
+.vert .dot {
+  right: -10px;
+  position: absolute;
+  top: 50%;
+  transform: translate(100%, -50%);
+  width: 6px;
+  height: auto;
+}
+
+.vertleft .dot {
+  left: -9px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  width: 6px;
+  height: auto;
+}
+
+.hor .title {
+ display: flex;
+ gap: 10px;
+ align-items: center;
+ margin-bottom: 15px;
+ top: -15px;
+ position: absolute;
+ transform: translateY(-100%);
+}
+
+.title span {
+  z-index: 4;
+  font-size: {titleFontSize}px;
+  left: 0;
+  padding: 4px 1.5em;
+  border-radius: 50px;
+  line-height: 1em;
+  background: {fontColor};
+}
+
+.title svg { 
+  width: 6px;
+  height: auto;
+}
+
+.title {
+ word-wrap: nowrap;
+ white-space: nowrap;
+}
+
+.vert .title, .vertleft .title {
+ display: flex;
+ gap: 10px;
+ align-items: center;
+ margin-bottom: 15px;
+ bottom: -35px;
+ left: 50%;
+ position: absolute;
+ transform: translate(-50%, 100%);
+}
+
+.vert .title .gsp, .vertleft .title .gsp {
+  z-index: 4;
+  font-size: {titleFontSize}px;
+  left: 0;
+  border-radius: 50px;
+  line-height: 1em;
+  background: {fontColor};
+  left: 50%;
+  bottom: -15px;
+ position: absolute;
+ transform: translate(-50%, 100%);
+}
+
+.vert .title svg, .vertleft .title svg {
+  left: 50%;
+  bottom: -4px;
+ position: absolute;
+ transform: translate(-50%, 100%);
+}
+
+.gsp {
+ padding: 4px 20px !important;
+}
+
+* {
+   font-family: '{titleFontName}';
+   font-weight: {fontWeight};
+   color: {titleFontColor};
+}
