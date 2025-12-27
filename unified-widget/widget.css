@@ -153,6 +153,12 @@ body.dev {
 /* --- Full Circle --- */
 .mode-full #center-percent {
     display: block;
+    /* Center exactly */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
 }
 
 .has-image #center-percent {
@@ -161,17 +167,42 @@ body.dev {
 
 .mode-full #text-wrapper {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 105%;
+    /* Push below center */
+    left: 0;
     width: 100%;
+    transform: none;
+    /* Reset transform */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* If image present, push text down */
+/* If image present, push text further down/out */
 .mode-full.has-image #text-wrapper {
     top: auto;
     bottom: -60px;
-    transform: translate(-50%, 0);
+}
+
+/* Center values for Full Circle */
+.mode-full #value-container {
+    justify-content: center;
+    gap: 15px;
+    /* Space around slash */
+}
+
+/* Add Slash Separator */
+.mode-full #current-val::after {
+    content: "/";
+    margin-left: 15px;
+    opacity: 0.7;
+}
+
+/* Remove margins in full mode */
+.mode-full #current-val,
+.mode-full #goal-val {
+    margin-right: 0;
+    text-align: center;
 }
 
 
