@@ -233,7 +233,7 @@ body.dev {
 
 .mode-openbottom #value-container {
     position: absolute;
-    bottom: 25px;
+    bottom: 0px;
     /* Fine tune */
     left: 0;
     width: 100%;
@@ -266,6 +266,16 @@ body.dev {
     text-align: right;
     color: var(--secondary);
 }
+
+.mode-arc75 #goal-val,
+.mode-openbottom #goal-val {
+    margin-right: 70px;
+}
+/* .mode-arc75 #value-container,
+.mode-openbottom #value-container {
+    margin-top: 70px;
+} */
+
 
 /* Position Title */
 /* Semi: Top Center - Move to very top */
