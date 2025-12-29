@@ -35,6 +35,8 @@ function init(fieldData, sessionData) {
         secondaryColor: '#a855f7',
         trackColor: '#444444',
         textColor: '#ffffff',
+        startValueColor: '#ff2d95',
+        goalValueColor: '#a855f7',
         titleText: 'GOAL',
         fontFamily: 'Poppins',
         goalValue: 100,
@@ -70,6 +72,8 @@ function applyStyles() {
     r.style.setProperty('--secondary', settings.secondaryColor);
     r.style.setProperty('--track', settings.trackColor);
     r.style.setProperty('--text', settings.textColor);
+    r.style.setProperty('--text-start', settings.startValueColor);
+    r.style.setProperty('--text-goal', settings.goalValueColor);
     r.style.setProperty('--size', settings.widgetSize + 'px');
 
     // Font Loading and Application

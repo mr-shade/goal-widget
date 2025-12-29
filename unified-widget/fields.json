@@ -68,6 +68,18 @@
     "value": "#ffffff",
     "group": "Colors"
   },
+  "startValueColor": {
+    "type": "colorpicker",
+    "label": "Start Value Color (0)",
+    "value": "#ff2d95",
+    "group": "Colors"
+  },
+  "goalValueColor": {
+    "type": "colorpicker",
+    "label": "Goal Value Color (100)",
+    "value": "#a855f7",
+    "group": "Colors"
+  },
   "section_content": {
     "type": "header",
     "label": "📝 Text & Content"
@@ -76,6 +88,16 @@
     "type": "text",
     "label": "Title Text",
     "value": "SUBSCRIPTIONS",
+    "group": "Content"
+  },
+  "titlePosition": {
+    "type": "dropdown",
+    "label": "Title Position",
+    "value": "top",
+    "options": {
+      "top": "Top",
+      "bottom": "Bottom"
+    },
     "group": "Content"
   },
   "fontFamily": {

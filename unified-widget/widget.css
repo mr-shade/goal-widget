@@ -257,20 +257,23 @@ body.dev {
 .mode-arc75 #current-val,
 .mode-openbottom #current-val {
     text-align: left;
-    color: var(--primary);
+    color: var(--text-start);
+    /* Customizable */
 }
 
 .mode-semi #goal-val,
 .mode-arc75 #goal-val,
 .mode-openbottom #goal-val {
     text-align: right;
-    color: var(--secondary);
+    color: var(--text-goal);
+    /* Customizable */
 }
 
 .mode-arc75 #goal-val,
 .mode-openbottom #goal-val {
     margin-right: 70px;
 }
+
 /* .mode-arc75 #value-container,
 .mode-openbottom #value-container {
     margin-top: 70px;
