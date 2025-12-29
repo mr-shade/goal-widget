@@ -282,9 +282,22 @@ body.dev {
 
 /* Position Title */
 /* Semi: Top Center - Move to very top */
-.mode-semi #title-el {
+/* Position Title */
+
+/* Default & Top Position for Semi */
+.mode-semi.title-top #title-el {
     position: absolute;
     top: 0px;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+}
+
+/* Bottom Position for Semi (User Option) */
+.mode-semi.title-bottom #title-el {
+    position: absolute;
+    top: auto;
+    bottom: 0px;
     left: 0;
     width: 100%;
 }

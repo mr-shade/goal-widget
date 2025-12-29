@@ -38,6 +38,7 @@ function init(fieldData, sessionData) {
         startValueColor: '#ff2d95',
         goalValueColor: '#a855f7',
         titleText: 'GOAL',
+        titlePosition: 'bottom',
         fontFamily: 'Poppins',
         goalValue: 100,
         startingValue: 0,
@@ -109,7 +110,7 @@ function applyStyles() {
     const titleEl = document.getElementById('title-el');
     titleEl.innerText = settings.titleText;
 
-    document.body.className = `mode-${settings.shapeMode} style-${settings.styleMode} ${settings.imageUrl ? 'has-image' : ''}`;
+    document.body.className = `mode-${settings.shapeMode} style-${settings.styleMode} title-${settings.titlePosition} ${settings.imageUrl ? 'has-image' : ''}`;
     if (typeof isDev !== 'undefined' && isDev) document.body.classList.add('dev');
 }
 
@@ -175,7 +176,7 @@ function updateProgress(add) {
     // Update split values
     const currentEl = document.getElementById('current-val');
     const goalEl = document.getElementById('goal-val');
-    
+
     if (currentEl) currentEl.innerText = `${prefix}${dispCurrent}`;
     if (goalEl) goalEl.innerText = `${prefix}${dispTarget}`;
 
