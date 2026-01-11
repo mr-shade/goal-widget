@@ -3,7 +3,7 @@
   "fields": [
     {
       "type": "text",
-      "key": "title",
+      "key": "widgetTitle",
       "label": "Editor Title (Internal)",
       "default": "Check-Ins"
     },

@@ -17,7 +17,7 @@ let settings = {
   enableStreak: false,
 
   // Visuals
-  title: "Check-Ins",
+  widgetTitle: "Check-Ins",
   mainImage: "",
   labelText: "Checked In",
   fontFamily: "Nunito",
@@ -119,7 +119,9 @@ function resetCounter() {
 // Using localStorage to match 'Streak' requests where user wants generic persistence.
 // Keyed by title to allow multiple widgets if they change title.
 function getStorageKey() {
-  return `checkin_widget_${settings.title.replace(/\s/g, '_')}`;
+  // Fallback to "Check-Ins" if title missing
+  const t = settings.widgetTitle || "Check-Ins";
+  return `checkin_widget_${t.replace(/\s/g, '_')}`;
 }
 
 function saveState() {
