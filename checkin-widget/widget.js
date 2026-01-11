@@ -25,7 +25,11 @@ let settings = {
   // Toggles
   hideLabel: false,
   hideStamp: false,
+  hideCounter: false,
   hideSparkles: false,
+
+  // Visual assets
+  defaultStamp: "star",
 
   // Audio
   sfxSound: "",
@@ -159,12 +163,28 @@ function loadSettings(fieldData) {
 
   // 1. Text & Content
   labelTextEl.innerText = settings.labelText;
-  mainImgEl.src = settings.mainImage || "https://via.placeholder.com/150";
+
+  // Logic for Image: Custom > Default > Placeholder
+  let imgUrl = settings.mainImage;
+  if (!imgUrl) {
+    // Map defaults to online assets or local placeholders
+    // Using generic icons for demonstration
+    const icons = {
+      star: "https://img.icons8.com/emoji/96/000000/star-emoji.png",
+      heart: "https://img.icons8.com/emoji/96/000000/purple-heart.png",
+      check: "https://img.icons8.com/emoji/96/000000/check-mark-button-emoji.png",
+      party: "https://img.icons8.com/emoji/96/000000/party-popper.png"
+    };
+    imgUrl = icons[settings.defaultStamp] || icons.star;
+  }
+  mainImgEl.src = imgUrl;
+
   if (settings.sfxSound) sfxPlayer.src = settings.sfxSound;
 
   // 2. Toggles
   labelPillEl.classList.toggle('hidden', settings.hideLabel);
   mainCircleEl.classList.toggle('hidden', settings.hideStamp);
+  badgeEl.classList.toggle('hidden', settings.hideCounter);
   // hideSparkles handled in spawnSparkles
 
   // 3. Fonts

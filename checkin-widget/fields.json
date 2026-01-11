@@ -19,6 +19,12 @@
     },
     {
       "type": "checkbox",
+      "key": "hideCounter",
+      "label": "Hide Counter Badge",
+      "default": false
+    },
+    {
+      "type": "checkbox",
       "key": "hideStamp",
       "label": "Hide Stamp/Image",
       "default": false
@@ -34,10 +40,34 @@
       "label": "Visual Assets"
     },
     {
+      "type": "dropdown",
+      "key": "defaultStamp",
+      "label": "Default Stamp (If Custom Empty)",
+      "default": "star",
+      "options": [
+        {
+          "value": "star",
+          "label": "Star"
+        },
+        {
+          "value": "heart",
+          "label": "Heart"
+        },
+        {
+          "value": "check",
+          "label": "Checkmark"
+        },
+        {
+          "value": "party",
+          "label": "Party"
+        }
+      ]
+    },
+    {
       "type": "image-input",
       "key": "mainImage",
-      "label": "Main Image (Avatar/Stamp)",
-      "default": "https://cdn.streamelements.com/uploads/00000000-0000-0000-0000-000000000000/avatar_placeholder.png"
+      "label": "Custom Image (Overrides Default)",
+      "default": ""
     },
     {
       "type": "text",
