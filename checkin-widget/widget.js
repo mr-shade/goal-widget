@@ -189,6 +189,14 @@ function loadSettings(fieldData) {
   badgeEl.classList.toggle('hidden', settings.hideCounter);
   // hideSparkles handled in spawnSparkles
 
+  // 3. Scaling
+  if (settings.widgetScale) {
+    const scale = settings.widgetScale / 100;
+    // Apply scale to wrapper
+    widgetWrapper.style.transform = `scale(${scale})`;
+    // Optional: adjust origin if needed, default center is fine for flex
+  }
+
   // 3. Fonts
   if (settings.fontFamily) {
     const link = document.createElement('link');
