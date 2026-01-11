@@ -1,212 +1,173 @@
 {
-  "title": "Check-In Counter Widget (Premium +)",
-  "fields": [
-    {
-      "type": "text",
-      "key": "widgetTitle",
-      "label": "Editor Title (Internal)",
-      "default": "Check-Ins"
+  "widgetTitle": {
+    "type": "text",
+    "label": "Editor Title (Internal)",
+    "value": "Check-Ins",
+    "group": "General"
+  },
+  "hideLabel": {
+    "type": "checkbox",
+    "label": "Hide Bottom Label",
+    "value": false,
+    "group": "Display Modes"
+  },
+  "hideCounter": {
+    "type": "checkbox",
+    "label": "Hide Counter Badge",
+    "value": false,
+    "group": "Display Modes"
+  },
+  "hideStamp": {
+    "type": "checkbox",
+    "label": "Hide Stamp/Image",
+    "value": false,
+    "group": "Display Modes"
+  },
+  "hideSparkles": {
+    "type": "checkbox",
+    "label": "Hide Sparkles",
+    "value": false,
+    "group": "Display Modes"
+  },
+  "defaultStamp": {
+    "type": "dropdown",
+    "label": "Default Stamp (If Custom Empty)",
+    "value": "star",
+    "options": {
+      "star": "Star",
+      "heart": "Heart",
+      "check": "Checkmark",
+      "party": "Party"
     },
-    {
-      "type": "header",
-      "label": "Display Modes"
-    },
-    {
-      "type": "checkbox",
-      "key": "hideLabel",
-      "label": "Hide Bottom Label",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "key": "hideCounter",
-      "label": "Hide Counter Badge",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "key": "hideStamp",
-      "label": "Hide Stamp/Image",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "key": "hideSparkles",
-      "label": "Hide Sparkles",
-      "default": false
-    },
-    {
-      "type": "header",
-      "label": "Visual Assets"
-    },
-    {
-      "type": "dropdown",
-      "key": "defaultStamp",
-      "label": "Default Stamp (If Custom Empty)",
-      "default": "star",
-      "options": [
-        {
-          "value": "star",
-          "label": "Star"
-        },
-        {
-          "value": "heart",
-          "label": "Heart"
-        },
-        {
-          "value": "check",
-          "label": "Checkmark"
-        },
-        {
-          "value": "party",
-          "label": "Party"
-        }
-      ]
-    },
-    {
-      "type": "image-input",
-      "key": "mainImage",
-      "label": "Custom Image (Overrides Default)",
-      "default": ""
-    },
-    {
-      "type": "text",
-      "key": "labelText",
-      "label": "Label Text",
-      "default": "Checked In"
-    },
-    {
-      "type": "googleFont",
-      "key": "fontFamily",
-      "label": "Font Family",
-      "default": "Nunito"
-    },
-    {
-      "type": "header",
-      "label": "Colors - Avatar"
-    },
-    {
-      "type": "colorpicker",
-      "key": "avatarBorderOuter",
-      "label": "Avatar Outer Border",
-      "default": "#CFAAF5"
-    },
-    {
-      "type": "colorpicker",
-      "key": "avatarBorderCenter",
-      "label": "Avatar Center Border",
-      "default": "#F3E5F5"
-    },
-    {
-      "type": "colorpicker",
-      "key": "avatarBorderInner",
-      "label": "Avatar Inner Border",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "header",
-      "label": "Colors - Badge & Stars"
-    },
-    {
-      "type": "colorpicker",
-      "key": "badgeBgColor",
-      "label": "Badge Background",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "colorpicker",
-      "key": "badgeBorderColor",
-      "label": "Badge Border",
-      "default": "#CFAAF5"
-    },
-    {
-      "type": "colorpicker",
-      "key": "badgeTextColor",
-      "label": "Badge Text Color",
-      "default": "#545454"
-    },
-    {
-      "type": "colorpicker",
-      "key": "labelBgColor",
-      "label": "Label Background",
-      "default": "#F3E5F5"
-    },
-    {
-      "type": "colorpicker",
-      "key": "labelTextColor",
-      "label": "Label Text Color",
-      "default": "#6A4C93"
-    },
-    {
-      "type": "colorpicker",
-      "key": "starFillColor",
-      "label": "Sparkles Fill",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "colorpicker",
-      "key": "starBorderColor",
-      "label": "Sparkles Border",
-      "default": "#FFD700"
-    },
-    {
-      "type": "header",
-      "label": "Audio"
-    },
-    {
-      "type": "sound-input",
-      "key": "sfxSound",
-      "label": "Interaction Sound",
-      "default": ""
-    },
-    {
-      "type": "slider",
-      "key": "sfxVolume",
-      "label": "Volume",
-      "default": 50,
-      "min": 0,
-      "max": 100,
-      "step": 1
-    },
-    {
-      "type": "header",
-      "label": "Logic & Streak"
-    },
-    {
-      "type": "checkbox",
-      "key": "enableStreak",
-      "label": "Enable Streak Mode (Reset after 24h inactivity)",
-      "default": false
-    },
-    {
-      "type": "number",
-      "key": "startCount",
-      "label": "Starting Count (Override)",
-      "default": 0
-    },
-    {
-      "type": "number",
-      "key": "incrementBy",
-      "label": "Increment Amount",
-      "default": 1
-    },
-    {
-      "type": "text",
-      "key": "triggerKeyword",
-      "label": "Chat Keyword",
-      "default": "!checkin"
-    },
-    {
-      "type": "text",
-      "key": "rewardName",
-      "label": "Reward Name",
-      "default": ""
-    },
-    {
-      "type": "checkbox",
-      "key": "manualResetToggle",
-      "label": "Manual Reset (Toggle to Reset)",
-      "default": false
-    }
-  ]
+    "group": "Visual Assets"
+  },
+  "mainImage": {
+    "type": "image-input",
+    "label": "Custom Image (Overrides Default)",
+    "value": "",
+    "group": "Visual Assets"
+  },
+  "labelText": {
+    "type": "text",
+    "label": "Label Text",
+    "value": "Checked In",
+    "group": "Visual Assets"
+  },
+  "fontFamily": {
+    "type": "googleFont",
+    "label": "Font Family",
+    "value": "Nunito",
+    "group": "Visual Assets"
+  },
+  "avatarBorderOuter": {
+    "type": "colorpicker",
+    "label": "Avatar Outer Border",
+    "value": "#CFAAF5",
+    "group": "Colors - Avatar"
+  },
+  "avatarBorderCenter": {
+    "type": "colorpicker",
+    "label": "Avatar Center Border",
+    "value": "#F3E5F5",
+    "group": "Colors - Avatar"
+  },
+  "avatarBorderInner": {
+    "type": "colorpicker",
+    "label": "Avatar Inner Border",
+    "value": "#FFFFFF",
+    "group": "Colors - Avatar"
+  },
+  "badgeBgColor": {
+    "type": "colorpicker",
+    "label": "Badge Background",
+    "value": "#FFFFFF",
+    "group": "Colors - Badge"
+  },
+  "badgeBorderColor": {
+    "type": "colorpicker",
+    "label": "Badge Border",
+    "value": "#CFAAF5",
+    "group": "Colors - Badge"
+  },
+  "badgeTextColor": {
+    "type": "colorpicker",
+    "label": "Badge Text Color",
+    "value": "#545454",
+    "group": "Colors - Badge"
+  },
+  "labelBgColor": {
+    "type": "colorpicker",
+    "label": "Label Background",
+    "value": "#F3E5F5",
+    "group": "Colors - Label"
+  },
+  "labelTextColor": {
+    "type": "colorpicker",
+    "label": "Label Text Color",
+    "value": "#6A4C93",
+    "group": "Colors - Label"
+  },
+  "starFillColor": {
+    "type": "colorpicker",
+    "label": "Sparkles Fill",
+    "value": "#FFFFFF",
+    "group": "Colors - Sparkles"
+  },
+  "starBorderColor": {
+    "type": "colorpicker",
+    "label": "Sparkles Border",
+    "value": "#FFD700",
+    "group": "Colors - Sparkles"
+  },
+  "sfxSound": {
+    "type": "sound-input",
+    "label": "Interaction Sound",
+    "value": "",
+    "group": "Audio"
+  },
+  "sfxVolume": {
+    "type": "slider",
+    "label": "Volume",
+    "value": 50,
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "group": "Audio"
+  },
+  "enableStreak": {
+    "type": "checkbox",
+    "label": "Enable Streak Mode",
+    "value": false,
+    "group": "Logic"
+  },
+  "startCount": {
+    "type": "number",
+    "label": "Starting Count (Override)",
+    "value": 0,
+    "group": "Logic"
+  },
+  "incrementBy": {
+    "type": "number",
+    "label": "Increment Amount",
+    "value": 1,
+    "group": "Logic"
+  },
+  "triggerKeyword": {
+    "type": "text",
+    "label": "Chat Keyword",
+    "value": "!checkin",
+    "group": "Logic"
+  },
+  "rewardName": {
+    "type": "text",
+    "label": "Reward Name",
+    "value": "",
+    "group": "Logic"
+  },
+  "manualResetToggle": {
+    "type": "checkbox",
+    "label": "Manual Reset (Toggle to Reset)",
+    "value": false,
+    "group": "Logic"
+  }
 }
