@@ -1,58 +1,184 @@
 :root {
-  --font-family: 'Inter', sans-serif;
-  --title-size: 24px;
-  --counter-size: 64px;
-  --text-color: #ffffff;
-  --accent-color: #00ffcc;
-  --bg-color: transparent;
+  --font-family: 'Nunito', sans-serif;
+
+  /* Colors - Defaults will be overwritten by JS */
+  --primary-color: #CFAAF5;
+  /* Light Purple ring */
+  --badge-bg: #FFFFFF;
+  /* Cloud White */
+  --badge-text: #545454;
+  /* Dark Grey Text */
+  --label-bg: #F3E5F5;
+  /* Very Light Purple Pill */
+  --label-text: #6A4C93;
+  /* Dark Purple Text */
 }
 
 body {
   margin: 0;
   padding: 0;
-  background: var(--bg-color);
+  background: transparent;
   overflow: hidden;
+  font-family: var(--font-family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-#widget {
-  font-family: var(--font-family);
-  text-align: center;
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.widget-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Initial scale for entrance? logic handled in JS/CSS anims */
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* --- Main Circle --- */
+.main-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 6px solid var(--primary-color);
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-holder {
   width: 100%;
-  height: 100vh; /* Full height for OBS flexibility, usually users crop or size the source */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Adjust height to fit content if wanted, but 100vh safe for centering */
-@media (max-height: 200px) {
-    #widget {
-        height: auto;
-    }
+.image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-#title {
-  font-size: var(--title-size);
-  color: var(--text-color);
-  margin-bottom: 8px;
-  font-weight: 600;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+/* --- Cloud Badge (Counter) --- */
+.count-badge {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  /* Adjust based on circle size */
+  width: 70px;
+  height: 50px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Cloud Shape using radial gradients fallback or clip-path? 
+     A simple rounded cloud-like shape is easiest with border-radius */
+  background: var(--badge-bg);
+  border-radius: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: 3px solid var(--primary-color);
+
+  /* Pop Animation target */
+  transform-origin: center;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Cloud bumps cosmetic - simplify to Pill for robustness or use ::before/::after for bumps */
+.count-badge::before,
+.count-badge::after {
+  content: '';
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+}
+
+/* Making it look more "cloudy" */
+.count-badge {
+  /* If user wants cloud, we can use a specific clip-path or just bubbly border-radius */
+  border-radius: 20px;
 }
 
 #counter {
-  font-size: var(--counter-size);
-  color: var(--accent-color);
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--badge-text);
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Label Pill --- */
+.label-pill {
+  position: absolute;
+  bottom: 10px;
+  /* Overlapping bottom of circle */
+  background: var(--label-bg);
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+  white-space: nowrap;
+  min-width: 100px;
+  text-align: center;
+}
+
+#labelText {
+  font-size: 16px;
   font-weight: 800;
-  text-shadow: 0 4px 8px rgba(0,0,0,0.5);
-  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  will-change: transform;
+  color: var(--label-text);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
+/* --- Animations --- */
 .bump {
-  transform: scale(1.3);
+  animation: pop 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
-.hidden {
-  display: none;
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }

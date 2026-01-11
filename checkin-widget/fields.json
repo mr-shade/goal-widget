@@ -1,62 +1,120 @@
 {
-  "title": "Check-In Counter Widget",
+  "title": "Check-In Counter Widget (Premium)",
   "fields": [
     {
       "type": "text",
       "key": "title",
-      "label": "Title Text",
+      "label": "Editor Title (Internal)",
       "default": "Check-Ins"
+    },
+    {
+      "type": "header",
+      "label": "Visual Settings"
+    },
+    {
+      "type": "image-input",
+      "key": "mainImage",
+      "label": "Main Image (Avatar/Stamp)",
+      "default": "https://cdn.streamelements.com/uploads/00000000-0000-0000-0000-000000000000/avatar_placeholder.png"
+    },
+    {
+      "type": "text",
+      "key": "labelText",
+      "label": "Bottom Label Text",
+      "default": "Checked In"
+    },
+    {
+      "type": "checkbox",
+      "key": "enableFloating",
+      "label": "Enable Floating Animation",
+      "default": true
     },
     {
       "type": "googleFont",
       "key": "fontFamily",
       "label": "Font Family",
-      "default": "Inter"
+      "default": "Nunito"
+    },
+    {
+      "type": "header",
+      "label": "Colors"
+    },
+    {
+      "type": "colorpicker",
+      "key": "primaryColor",
+      "label": "Main Border/Details",
+      "default": "#CFAAF5"
+    },
+    {
+      "type": "colorpicker",
+      "key": "badgeColor",
+      "label": "Badge Background (Cloud)",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "colorpicker",
+      "key": "badgeTextColor",
+      "label": "Badge Text Color",
+      "default": "#545454"
+    },
+    {
+      "type": "colorpicker",
+      "key": "labelBgColor",
+      "label": "Label Background",
+      "default": "#F3E5F5"
+    },
+    {
+      "type": "colorpicker",
+      "key": "labelTextColor",
+      "label": "Label Text Color",
+      "default": "#6A4C93"
+    },
+    {
+      "type": "header",
+      "label": "Counter Logic"
+    },
+    {
+      "type": "number",
+      "key": "startCount",
+      "label": "Starting Count (Restore Streak)",
+      "default": 0
     },
     {
       "type": "number",
       "key": "incrementBy",
-      "label": "Increment By",
+      "label": "Increment Amount",
       "default": 1
+    },
+    {
+      "type": "header",
+      "label": "Triggers"
     },
     {
       "type": "text",
       "key": "triggerKeyword",
-      "label": "Trigger Keyword",
+      "label": "Chat Keyword",
       "default": "!checkin"
     },
     {
       "type": "text",
       "key": "rewardName",
-      "label": "Channel Reward Name (Exact Match)",
+      "label": "Reward Name",
       "default": ""
-    },
-    {
-      "type": "colorpicker",
-      "key": "textColor",
-      "label": "Text Color",
-      "default": "#ffffff"
-    },
-    {
-      "type": "colorpicker",
-      "key": "accentColor",
-      "label": "Counter Color",
-      "default": "#00ffcc"
-    },
-    {
-      "type": "checkbox",
-      "key": "enableAnimation",
-      "label": "Enable Animation",
-      "default": true
     },
     {
       "type": "dropdown",
       "key": "resetMode",
-      "label": "Reset Mode",
+      "label": "Reset Frequency",
       "default": "manual",
       "options": [
-        { "value": "manual", "label": "Manual Only" },
-        { "value": "session", "label": "Session (On Load)" }
+        {
+          "value": "manual",
+          "label": "Manual / Session"
+        },
+        {
+          "value": "daily",
+          "label": "Daily (Needs Widget Open)"
+        }
       ]
     },
     {

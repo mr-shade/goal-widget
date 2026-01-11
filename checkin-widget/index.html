@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Check-In Counter Widget</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Google Fonts placeholder - injected by SE or script if needed, but best to have a default import -->
+  <!-- Default font for Kawaii look before loading user selection -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <div id="widget">
-    <div id="title">Check-Ins</div>
-    <div id="counter">0</div>
+
+  <div class="container">
+    <div class="widget-wrapper" id="widgetWrapper">
+
+      <!-- Main Circular Avatar/Image -->
+      <div class="main-circle">
+        <div class="image-holder">
+          <!-- Ideally we use background-image in CSS, but img tag allows easy src replacement -->
+          <img id="mainImg" src="https://via.placeholder.com/150" alt="Stamp" />
+        </div>
+      </div>
+
+      <!-- Cloud Badge (Counter) -->
+      <div class="count-badge">
+        <!-- Cloud SVG shape background done via CSS or inline SVG -->
+        <div class="cloud-bg"></div>
+        <span id="counter">0</span>
+      </div>
+
+      <!-- Bottom Pill Label -->
+      <div class="label-pill">
+        <span id="labelText">Checked In</span>
+      </div>
+
+    </div>
   </div>
 
   <script src="widget.js"></script>
 </body>
+
 </html>
