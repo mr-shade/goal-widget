@@ -1,5 +1,5 @@
 {
-  "title": "Check-In Counter Widget (Premium)",
+  "title": "Check-In Counter Widget (Premium +)",
   "fields": [
     {
       "type": "text",
@@ -9,7 +9,29 @@
     },
     {
       "type": "header",
-      "label": "Visual Settings"
+      "label": "Display Modes"
+    },
+    {
+      "type": "checkbox",
+      "key": "hideLabel",
+      "label": "Hide Bottom Label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "key": "hideStamp",
+      "label": "Hide Stamp/Image",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "key": "hideSparkles",
+      "label": "Hide Sparkles",
+      "default": false
+    },
+    {
+      "type": "header",
+      "label": "Visual Assets"
     },
     {
       "type": "image-input",
@@ -20,14 +42,8 @@
     {
       "type": "text",
       "key": "labelText",
-      "label": "Bottom Label Text",
+      "label": "Label Text",
       "default": "Checked In"
-    },
-    {
-      "type": "checkbox",
-      "key": "enableFloating",
-      "label": "Enable Floating Animation",
-      "default": true
     },
     {
       "type": "googleFont",
@@ -37,19 +53,41 @@
     },
     {
       "type": "header",
-      "label": "Colors"
+      "label": "Colors - Avatar"
     },
     {
       "type": "colorpicker",
-      "key": "primaryColor",
-      "label": "Main Border/Details",
+      "key": "avatarBorderOuter",
+      "label": "Avatar Outer Border",
       "default": "#CFAAF5"
     },
     {
       "type": "colorpicker",
-      "key": "badgeColor",
-      "label": "Badge Background (Cloud)",
+      "key": "avatarBorderCenter",
+      "label": "Avatar Center Border",
+      "default": "#F3E5F5"
+    },
+    {
+      "type": "colorpicker",
+      "key": "avatarBorderInner",
+      "label": "Avatar Inner Border",
       "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "label": "Colors - Badge & Stars"
+    },
+    {
+      "type": "colorpicker",
+      "key": "badgeBgColor",
+      "label": "Badge Background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "colorpicker",
+      "key": "badgeBorderColor",
+      "label": "Badge Border",
+      "default": "#CFAAF5"
     },
     {
       "type": "colorpicker",
@@ -70,13 +108,50 @@
       "default": "#6A4C93"
     },
     {
+      "type": "colorpicker",
+      "key": "starFillColor",
+      "label": "Sparkles Fill",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "colorpicker",
+      "key": "starBorderColor",
+      "label": "Sparkles Border",
+      "default": "#FFD700"
+    },
+    {
       "type": "header",
-      "label": "Counter Logic"
+      "label": "Audio"
+    },
+    {
+      "type": "sound-input",
+      "key": "sfxSound",
+      "label": "Interaction Sound",
+      "default": ""
+    },
+    {
+      "type": "slider",
+      "key": "sfxVolume",
+      "label": "Volume",
+      "default": 50,
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    {
+      "type": "header",
+      "label": "Logic & Streak"
+    },
+    {
+      "type": "checkbox",
+      "key": "enableStreak",
+      "label": "Enable Streak Mode (Reset after 24h inactivity)",
+      "default": false
     },
     {
       "type": "number",
       "key": "startCount",
-      "label": "Starting Count (Restore Streak)",
+      "label": "Starting Count (Override)",
       "default": 0
     },
     {
@@ -84,10 +159,6 @@
       "key": "incrementBy",
       "label": "Increment Amount",
       "default": 1
-    },
-    {
-      "type": "header",
-      "label": "Triggers"
     },
     {
       "type": "text",
@@ -100,22 +171,6 @@
       "key": "rewardName",
       "label": "Reward Name",
       "default": ""
-    },
-    {
-      "type": "dropdown",
-      "key": "resetMode",
-      "label": "Reset Frequency",
-      "default": "manual",
-      "options": [
-        {
-          "value": "manual",
-          "label": "Manual / Session"
-        },
-        {
-          "value": "daily",
-          "label": "Daily (Needs Widget Open)"
-        }
-      ]
     },
     {
       "type": "checkbox",

@@ -1,17 +1,23 @@
 :root {
   --font-family: 'Nunito', sans-serif;
 
-  /* Colors - Defaults will be overwritten by JS */
-  --primary-color: #CFAAF5;
-  /* Light Purple ring */
+  /* Avatar Borders */
+  --avatar-border-outer: #CFAAF5;
+  --avatar-border-center: #F3E5F5;
+  --avatar-border-inner: #FFFFFF;
+
+  /* Badge */
   --badge-bg: #FFFFFF;
-  /* Cloud White */
+  --badge-border: #CFAAF5;
   --badge-text: #545454;
-  /* Dark Grey Text */
+
+  /* Label */
   --label-bg: #F3E5F5;
-  /* Very Light Purple Pill */
   --label-text: #6A4C93;
-  /* Dark Purple Text */
+
+  /* Sparkles */
+  --star-fill: #FFFFFF;
+  --star-border: #FFD700;
 }
 
 body {
@@ -35,125 +41,100 @@ body {
 
 .widget-wrapper {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Initial scale for entrance? logic handled in JS/CSS anims */
+  justify-content: center;
 }
 
-.floating {
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-/* --- Main Circle --- */
+/* --- Main Circle with Triple Border --- */
 .main-circle {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  border: 6px solid var(--primary-color);
+
+  /* Triple Border Trick using Box Shadow */
+  /* Inner (Solid) | Center (Solid) | Outer (Solid) */
+  /* Actually, easiest is border + box-shadows */
+  border: 4px solid var(--avatar-border-inner);
+  box-shadow:
+    0 0 0 4px var(--avatar-border-center),
+    0 0 0 8px var(--avatar-border-outer),
+    0 10px 20px rgba(0, 0, 0, 0.15);
+  /* Drop Shadow */
+
   background: #fff;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
-  z-index: 1;
+  z-index: 5;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.2s ease;
 }
 
 .image-holder {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .image-holder img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
-/* --- Cloud Badge (Counter) --- */
+/* --- Cloud Badge --- */
 .count-badge {
   position: absolute;
-  top: -10px;
-  right: 15px;
-  /* Adjust based on circle size */
-  width: 70px;
-  height: 50px;
+  top: 10px;
+  /* Adjusted due to larger container/shadows */
+  right: 25px;
+  width: 60px;
+  height: 60px;
   z-index: 10;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /* Cloud Shape using radial gradients fallback or clip-path? 
-     A simple rounded cloud-like shape is easiest with border-radius */
   background: var(--badge-bg);
-  border-radius: 40px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  border: 3px solid var(--primary-color);
-
-  /* Pop Animation target */
-  transform-origin: center;
-  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* Cloud shape via border-radius */
+  border-radius: 50%;
+  border: 3px solid var(--badge-border);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Cloud bumps cosmetic - simplify to Pill for robustness or use ::before/::after for bumps */
-.count-badge::before,
-.count-badge::after {
-  content: '';
-  position: absolute;
-  background: inherit;
-  z-index: -1;
-}
-
-/* Making it look more "cloudy" */
-.count-badge {
-  /* If user wants cloud, we can use a specific clip-path or just bubbly border-radius */
-  border-radius: 20px;
+.cloud-shape .count-badge {
+  /* If we want a specific cloud SVG background, we'd use bg image. 
+       For CSS only, a flower/cloud shape is tricky without clip-path. 
+       Let's use a "Flower" shape using a pseudo element if desired, 
+       but for now circle is clean and matches "Cloud" via radius variance if we want. */
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  /* Organic blob */
 }
 
 #counter {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 900;
   color: var(--badge-text);
-  position: relative;
   z-index: 2;
 }
 
 /* --- Label Pill --- */
 .label-pill {
   position: absolute;
-  bottom: 10px;
-  /* Overlapping bottom of circle */
+  bottom: 20px;
   background: var(--label-bg);
-  padding: 8px 20px;
+  padding: 8px 24px;
   border-radius: 20px;
-  border: 3px solid var(--primary-color);
+  border: 3px solid var(--avatar-border-outer);
+  /* Match outer border */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 5;
+  z-index: 8;
   white-space: nowrap;
-  min-width: 100px;
-  text-align: center;
 }
 
 #labelText {
@@ -161,10 +142,56 @@ body {
   font-weight: 800;
   color: var(--label-text);
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-/* --- Animations --- */
+/* --- Sparkles --- */
+.sparkles-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 12;
+}
+
+.star {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--star-fill);
+  border: 2px solid var(--star-border);
+  transform: rotate(45deg);
+  /* Four point star using clip path or just a diamond */
+  /* Simple diamond for now */
+  display: inline-block;
+  opacity: 0;
+}
+
+.star.animate {
+  animation: twinkle 1s ease-out forwards;
+}
+
+@keyframes twinkle {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.2) rotate(45deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0) rotate(90deg);
+    opacity: 0;
+  }
+}
+
+/* --- Utilities --- */
+.hidden {
+  display: none !important;
+}
+
 .bump {
   animation: pop 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
@@ -175,7 +202,7 @@ body {
   }
 
   50% {
-    transform: scale(1.3);
+    transform: scale(1.1);
   }
 
   100% {
