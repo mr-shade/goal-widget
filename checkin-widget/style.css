@@ -1,0 +1,58 @@
+:root {
+  --font-family: 'Inter', sans-serif;
+  --title-size: 24px;
+  --counter-size: 64px;
+  --text-color: #ffffff;
+  --accent-color: #00ffcc;
+  --bg-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  overflow: hidden;
+}
+
+#widget {
+  font-family: var(--font-family);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh; /* Full height for OBS flexibility, usually users crop or size the source */
+}
+
+/* Adjust height to fit content if wanted, but 100vh safe for centering */
+@media (max-height: 200px) {
+    #widget {
+        height: auto;
+    }
+}
+
+#title {
+  font-size: var(--title-size);
+  color: var(--text-color);
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+#counter {
+  font-size: var(--counter-size);
+  color: var(--accent-color);
+  font-weight: 800;
+  text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: transform;
+}
+
+.bump {
+  transform: scale(1.3);
+}
+
+.hidden {
+  display: none;
+}

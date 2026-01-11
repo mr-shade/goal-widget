@@ -1,0 +1,69 @@
+{
+  "title": "Check-In Counter Widget",
+  "fields": [
+    {
+      "type": "text",
+      "key": "title",
+      "label": "Title Text",
+      "default": "Check-Ins"
+    },
+    {
+      "type": "googleFont",
+      "key": "fontFamily",
+      "label": "Font Family",
+      "default": "Inter"
+    },
+    {
+      "type": "number",
+      "key": "incrementBy",
+      "label": "Increment By",
+      "default": 1
+    },
+    {
+      "type": "text",
+      "key": "triggerKeyword",
+      "label": "Trigger Keyword",
+      "default": "!checkin"
+    },
+    {
+      "type": "text",
+      "key": "rewardName",
+      "label": "Channel Reward Name (Exact Match)",
+      "default": ""
+    },
+    {
+      "type": "colorpicker",
+      "key": "textColor",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "colorpicker",
+      "key": "accentColor",
+      "label": "Counter Color",
+      "default": "#00ffcc"
+    },
+    {
+      "type": "checkbox",
+      "key": "enableAnimation",
+      "label": "Enable Animation",
+      "default": true
+    },
+    {
+      "type": "dropdown",
+      "key": "resetMode",
+      "label": "Reset Mode",
+      "default": "manual",
+      "options": [
+        { "value": "manual", "label": "Manual Only" },
+        { "value": "session", "label": "Session (On Load)" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "key": "manualResetToggle",
+      "label": "Manual Reset (Toggle to Reset)",
+      "default": false
+    }
+  ]
+}
